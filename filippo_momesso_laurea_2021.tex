@@ -14,13 +14,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % formato FRONTE RETRO
-\documentclass[epsfig,a4paper,11pt,titlepage,twoside,openany]{book}
-\usepackage{epsfig}
+\documentclass[a4paper,11pt,titlepage,twoside,openany]{book}
 \usepackage{plain}
 \usepackage{setspace}
 \usepackage[paperheight=29.7cm,paperwidth=21cm,outer=1.5cm,inner=2.5cm,top=2cm,bottom=2cm]{geometry} % per definizione layout
 \usepackage{titlesec} % per formato custom dei titoli dei capitoli
 \usepackage{url}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[italian]{varioref}
 %%%%%%%%%%%%%%
 % supporto lettere accentate
 %
@@ -98,7 +100,7 @@
       \titlespacing*{\subsection}{0pt}{0.10in}{0.02in}
       
       % sommario
-      \input{chapters/preface/sommario}
+      %\input{chapters/preface/sommario}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Nota
@@ -121,8 +123,8 @@
       % \input oppure \include
       %
       \input{chapters/01/capitolo1}
-      \input{chapters/02/capitolo2}
-      \input{chapters/03/capitolo3}
+      %\input{chapters/02/capitolo2}
+      %\input{chapters/03/capitolo3}
       %\input{capitolo4}
       
       
@@ -169,6 +171,6 @@
         {\normalfont\Huge\bfseries}{Allegato \thechapter}{1em}{}
     % sezione Allegati - opzionale
     \appendix
-    \input{chapters/appendix/allegati}
+    %\input{chapters/appendix/allegati}
 
 \end{document}
