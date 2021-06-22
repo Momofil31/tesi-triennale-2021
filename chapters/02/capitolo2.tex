@@ -1,20 +1,239 @@
-\chapter{Proin rhoncus a sapien in.}
-\label{cha:789}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nunc orci. Aliquam nec nisl vitae sapien pulvinar dictum quis non urna. Suspendisse at dui a erat aliquam vestibulum. Quisque ultrices pellentesque pellentesque. Pellentesque egestas quam sed blandit tempus. Sed congue nec risus posuere euismod. Maecenas ut lacus id mauris sagittis egestas a eu dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque at ultrices tellus. Ut eu purus eget sem iaculis ultricies sed non lorem. Curabitur gravida dui eget ex vestibulum venenatis. Phasellus gravida tellus velit, non eleifend justo lobortis eget. 
+\graphicspath{{./chapters/02/assets/}}
 
+\chapter{Analisi delle tecnologie}
+In questo capitolo viene effettuata un'analisi dettagliata delle tecnologie Microsoft apprese e utilizzate durante il tirocinio.
 
-\section{Cras in aliquam quam, et}
-\label{sec:456}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nunc orci. Aliquam nec nisl vitae sapien pulvinar dictum quis non urna. Suspendisse at dui a erat aliquam vestibulum. Quisque ultrices pellentesque pellentesque. Pellentesque egestas quam sed blandit tempus. Sed congue nec risus posuere euismod. Maecenas ut lacus id mauris sagittis egestas a eu dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque at ultrices tellus. Ut eu purus eget sem iaculis ultricies sed non lorem. Curabitur gravida dui eget ex vestibulum venenatis. Phasellus gravida tellus velit, non eleifend justo lobortis eget.
+\section{Microsoft Dynamics CRM}
 
+Microsoft Dynamics CRM\footnote{Devo davvero ringraziare Tutorialspoint perché la sua guida, su cui mi sono basato per l'elaborazione di questa sezione, mi ha chiarito moltissimi dubbi che la documentazione ufficiale (estremamente confusionaria) e i colleghi in azienda non sono riusciti a risolvermi.} è un pacchetto software per la gestione delle relazioni con il cliente sviluppato da Microsoft. Di base si concentra principalmente sui settori Vendite, Marketing e Servizio Clienti, anche se è interamente customizzabile grazie al framework proprietario Microsoft XRM SDK  basato su .NET.
 
-\subsection{Sed pulvinar placerat enim, a}
-\label{sec:00456}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nunc orci. Aliquam nec nisl vitae sapien pulvinar dictum quis non urna. Suspendisse at dui a erat aliquam vestibulum. Quisque ultrices pellentesque pellentesque. Pellentesque egestas quam sed blandit tempus. Sed congue nec risus posuere euismod. Maecenas ut lacus id mauris sagittis egestas a eu dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque at ultrices tellus. Ut eu purus eget sem iaculis ultricies sed non lorem. Curabitur gravida dui eget ex vestibulum venenatis. Phasellus gravida tellus velit, non eleifend justo lobortis eget.
+Il CRM può essere utilizzato per aumentare la produttività delle vendite e l'efficacia del marketing per un'organizzazione, gestire l'intera catena di assistenza clienti e fornire informazioni sui social, business intelligence e molte altre funzionalità e caratteristiche pronte all'uso.
+L'interazione utente con Microsoft Dynamics CRM avviene attraverso l'interfaccia web, la quale è ottimizzata anche per l'utilizzo mobile e tablet oltre che desktop.
 
+\subsection{Moduli Funzionali}
+Il CRM è interamente progettato sui moduli funzionali Sales, Marketing e Service Management . Questi moduli funzionali sono spesso chiamati \textit{Work Areas}.
+Questa divisione in moduli è dovuta al fatto che un'azienda, nell'utilizzare il CRM per gestire i propri processi, necessita che gli utenti del settore vendite, ad esempio, abbiano a disposizione delle funzionalità specifiche disponibili nel modulo Sales, e parimenti gli utenti del settore marketing con il modulo Marketing e gli utenti del servizio clienti con il modulo Service Management.
 
-\section{Vivamus hendrerit imperdiet ex. Vivamus}
-\label{sec:123}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nunc orci. Aliquam nec nisl vitae sapien pulvinar dictum quis non urna. Suspendisse at dui a erat aliquam vestibulum. Quisque ultrices pellentesque pellentesque. Pellentesque egestas quam sed blandit tempus. Sed congue nec risus posuere euismod. Maecenas ut lacus id mauris sagittis egestas a eu dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque at ultrices tellus. Ut eu purus eget sem iaculis ultricies sed non lorem. Curabitur gravida dui eget ex vestibulum venenatis. Phasellus gravida tellus velit, non eleifend justo lobortis eget.
+\subsubsection{Modulo Sales}
+Il modulo Sales del CRM è progettato per gestire l'intero ciclo di vita di un nuovo cliente. Consiste dei seguenti sotto-moduli:
+\begin{itemize}
+  \item \textbf{Leads} - Rappresenta una persona o un organizzazinoe che può diventare un potenziale cliente in futuro. Questo è il primo passaggio per l'inserimento di un potenziale cliente nel sistema.
+  \item \textbf{Opportunities} - Rappresenta una potenziale vendita al cliente. Quando un Lead mostra interesse nell'offerta, viene convertita in Opportunity. Un Opportunity può essere vinta o persa.
+  \item \textbf{Accounts} - Rappresenta un'azienda con cui si ha una relazione. Qunado un'Opportunity è vinta, viene convertita in un Account o un Contact.
+  \item \textbf{Contacts} - Rappresenta una persona o un individuo con cui l'azienda ha una relazione. In genere un Contact è un cliente (ad esempio tutti gli intestatari di un conto presso per una banca).
+  \item \textbf{Competitors} - Gestisce i concorrenti di mercato dell'azienda.
+  \item \textbf{Products} - Gestisce i prodotti offerti dall'azienda ai clienti.
+  \item \textbf{Quotes} - Preventivo formale di prodotti o servizi proposti a prezzi specifici a un potenziale cliente.
+  \item \textbf{Orders} - Quando un Quote viene accettato da un cliente viene convertito in un Order.
+  \item \textbf{Invoices} - Fattura generata da un ordine.
+\end{itemize}
 
+\subsubsection{Modulo Marketing}
+Il modulo Marketing del CRM è progettato per gestire l'intero processo di marketing di un'azienda per i suoi clienti esistenti e potenziali. Consiste dei seguenti sotto-moduli, i quali funzionano in coordinazione con il modulo Sales:
+\begin{itemize}
+  \item \textbf{Marketing Lists} - Fornisce un metodo per raggruppare Contact, Account e Lead e interagire con essi attraverso l'invio di email promozionali, detagli di eventi, newsletter e altre comunicazioni rilevanti per il cliente. È possibile definire dei criteri per creare le Marketing List.
+  \item \textbf{Campaigns} - Servono a misurare l'efficacia e il completamento di uno specifico risultato, come l'introduzione di un nuovo prodotto o l'incremento della quota di mercato e può includere diversi canali di comunicazione come email e altre forme pobblicitarie.
+  \item \textbf{Quick Campaigns} - Simile a una Campaign ma può essere messa in relazione con un solo tipo di Activity.
+\end{itemize}
 
+\subsubsection{Modulo Service}
+Il modulo Service del CRM è progettato per gestire e tracciare le operazioni di servizio clienti di un azienda come il supporto ai servizi basati su incidenti/casi, pianificazione di interventi di supporto ai clienti eccetera. Consiste dei seguenti sotto-moduli:
+\begin{itemize}
+  \item \textbf{Cases} - Permette di tracciare una qualsiasi richiesta, problema o lamentela di un cliente. Un Case ha un processo di risoluzione composto di vari stati che terminano con la risoluzione o la chiusura del Case.
+  \item \textbf{Knowledge Base} - Mantiene una collezione d tutte le domande e risposte più comuni.
+  \item \textbf{Contracts} - In relazione con Cases indica i contratti che il cliente ha.
+  \item \textbf{Resources/Resouce Groups} - Rappresenta le persone, strumenti, luoghi o l'attrezzatura necessaria per fornire un servizio. Possono essere utilizzate per risolvere uno specifico problema di un cliente.
+  \item \textbf{Services} - Rappresentano i servizi di assistenza che l'azienda offre ai clienti
+  \item \textbf{Service Calendar} - Permette di organizzare le operazioni di assistenza.
+\end{itemize}
+
+\subsubsection{Gestione attività}
+Tutti i moduli precedentemente trattati fanno uso del modulo Activity Management del CRM. Un \textit{activity} rappresenta qualsiasi tipo di interazione con il cliente come telefonate, email, lettere, appuntamenti e altro ancora. Queste \textit{activity} possono essere messe in relazione con le altre entità trattate precedentemente appartenenti ai vari moduli del CRM.
+
+\subsection{Entità e Record}
+Un \textit{entità} è utilizzata per modellare dei dati nel CRM. Contact, Case, Account, Lead sono tutte entità del CRM che vengono istanziate in record. A livello concettuale un'entità è equivalente a una tabella di un database relazionale.
+
+Oltre alle entità presenti di default nel CRM è possibile definire nuove entità custom in base alle necessità specifiche, oppure modificare quelle esistenti aggiungendo o eliminando campi.
+
+Il CRM fornisce 11 tipi di campi:
+\begin{itemize}
+  \item Single Line of Text
+  \item Option Set (Dropdown)
+  \item Two Options (Radio Button)
+  \item Image
+  \item Whole Number
+  \item Floating Point Number
+  \item Decimal Number
+  \item Currency
+  \item Multiple Lines of Text
+  \item Date and Time
+  \item Lookup
+\end{itemize} 
+
+A partire dalla versione 2011 inoltre è disponibile un particolare tipo di campo chiamato Party List. Questo tipo consente di mappare una relazione tra entità come nel caso del tipo Lookup ma con la differenza che quest'ultimo può mappare una relazione con una singola entità mentre un campo di tipo Party List permette di avere una relazione con entità multiple. Per esempio una email può essere associata a un Contact, un User o una Queue.
+
+\subsection{Moduli (Forms)}
+Per creare, aggiornare o modificare un record nel CRM si utilizzano i Form. Ad ogni entità possono dunque essere associati uno o più Form. A seconda dell'opzione di visualizzazione scelta, del modulo funzionale selezionato o del tipo di utente che interagisce con il CRM possono essere visualizzati Form diversi. 
+I form possono essere creati attraverso un interfaccia apposita presente nelle impostazioni di customizzazione del CRM.
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{form-example.png}
+  \caption{Esempio di form per la modifica di un record Contact}
+  \label{fig:formExample}
+\end{figure}
+
+\subsection{Ricerca e Ricerca Avanzata}
+Una delle più importatanti funzionalità già pronte di Microsoft Dynamics CRM si trova nelle sue capacità di ricerca, le quali forniscono la possibilità di costruire \textit{query} e filtri molto avanzati senza la necessità da parte dell'utente di conoscere linguaggi di programmazione o di querying.
+
+Di default la vista a griglia di ogni entità supporta una funzionalità di Ricerca Veloce mediante una barra di ricerca posizionata nell'interfaccia utente in alto a destra come si può osservare in figura~\ref{fig:quickSearch}.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{quick-search.png}
+  \caption{Opzioni di ricerca rapida e avanzata.}
+  \label{fig:quickSearch}
+\end{figure}
+
+Cliccando invece sull'icona cerchiata in rosso in figura~\ref{fig:quickSearch} si accede alla ricerca avanzata, disponibile in una nuova finestra. La ricerca avanzata del CRM è una delle funzionalità più utili e potenti disponibili di default. In questa finestra, come si vede in figura~\ref{fig:advancedSearch} è possibile selezionare l'entità di cui di vogliono cercare i record, applicare filtri e criteri di raggruppamento e salvare i riultati come viste (\textit{views}) personali.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{advanced-search.png}
+  \caption{Finestra di ricerca avanzata.}
+  \label{fig:advancedSearch}
+\end{figure}
+
+\subsection{Web Resources}
+ Le \textit{Web Resources} nel CRM sono i file virtuali salvati nel database del CRM e usati per implementare le funzionalità della pagine web del CRM. Questi file possono essere HTML, Javascript, Silverlight o di qualsiasi altro tipo supportato. 
+ Nonostante il CRM venga fornito da Microsoft con una serie di funzionalità di base, spesso si rende necessario estendere e personalizzare queste funzionalità per rispettare e implemente i requisiti del progetto in questione. L'estensione delle funzionalità può avvenire in genere in due modi:
+ \begin{itemize}
+   \item \textbf{Estensione lato client} - Usando le Web Resources e il \textit{Form Scripting}.
+   \item \textbf{Estensione lato server} - Mediante \textit{Plugin}, \textit{Workflow} e \textit{Web Services}.
+ \end{itemize}
+
+Per capire quando può essere necessario l'utilizzo delle Web Resources del CRM prendiamo in considerazione i seguenti esempi: 
+\begin{itemize}
+  \item Si rende necessario fare ulteriori validazionei lato client sui campi di un form del CRM.
+  \item È necessario costruire una o più pagine completamente custom diverse che utilizzino dati provenienti da altri sistemi esterni al CRM.
+  \item Si vogliono applicare modifiche visive o funzionali all'interfaccia grafica standard del CRM.
+  \item Si vuole richiaramare l'esecuzione di servizi web esterni in seguito ad azioni lato client, senza dover scomodare l'utilizzo di plugin o workflow lato server.
+\end{itemize}
+
+L'accesso a una Web Resource può avvenire mediante il suo URL univoco. Dato che le Web Resource vengono salvate nel database del CRM, possono essere caricate come singolo file o come collezione eterogenea di file (HTML, Javascript, ecc.) oppure possono essere create e/o modificate direttamente dal CRM, mediante un pannello apposito. Questo consente inoltre di semplificare i passaggi in caso di migrazione da un ambiente a un altro, come per qualsiasi altra personalizzazione del CRM. In tabella~\ref{table:webResourceType} vi è un elendo dei principali tipi di web resource supportati.
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{lp{0.6\textwidth}}
+    \toprule
+      \textbf{Tipo di Web Resource} & \textbf{Esempio} \\ 
+    \midrule
+      Pagina Web (HTML) & È possibile creare una qualsiasi pagina HTML e inserirela in un form del CRM. \\
+      \midrule 
+      Fogli di stile (CSS) & Qualsiasi file css che può essere usato insieme ai file HTML. \\ 
+      \midrule
+      Script (Javascript) & Qualsiasi tipo di codice lato client per manipolare campi, valori, effettuare validazioni, ecc. \\ 
+      \midrule
+      Dati (XML) & Usati per salvare impostazioni o dati di configurazione in modo statico. \\
+      \midrule 
+      Immagini (PNG, JPG, GIF, ICO) & Qualsiasi immagine da utilizzare nel CRM.\\ 
+      \midrule
+      Silverlight (XAP) & Qualsiasi applicazione Microsoft Silverlight da utilizzare nel CRM. \\ 
+      \midrule
+      Fogli di stile (XSL) & Da usare per trasformare dati XML. \\ 
+      \bottomrule
+  \end{tabular}
+  \caption{Tipi di Web Resource supportati}
+  \label{table:webResourceType}
+\end{table}
+
+\subsection{Workflow}
+I \textit{Workflow} permettono di automatizzare processi di business all'interno del CRM. Possono essere creati utilizzando le funzionalità del CRM oppure mediante lo sviluppo di codice .NET, consigliato nel caso di worflow più complessi. I workflow possono essere eseguiti in background oppure in tempo reale e possono richiedere anche l'input dell'utente.
+
+L'esecuzione di un workflow può essere iniziata in base a specifiche condizioni oppure manualmente dall'utente (ad esempio tramite la pressione di un pulsante o la selezione di un'opzione nel CRM). Internamente i workflow sono implementati utilizzando Windows Workflow Foundation, una tecnologia Microsoft che fornisce un'API, un motore di workflow e un designer per implementare workflow all'interno di applicazioni .NET.
+
+I workflow del CRM possono essere eseguiti in maniera sincrona o asincrona. In genere, si utilizza l'approccio asincrono, facendo eseguire il workflow in background in quanto in questo modo si può limitare l'utilizzo di risorse del sistema.
+
+L'esecuzione di un workflow può avvenire in seguito a specifici eventi definiti dal \textit{Message} del workflow (ovvero il tipo di evento sul quale un Workflow può essere registrato) i quali possono essere creazione, modifica di uno o più valori, eliminazione di un record. Un workflow può inoltre avere uno \textit{scope} (in italiano "ambito di lavoro") che può essere User, Business Unit, Parent Child Business Unit o Organization. È possibile quindi specificare su quali record potrà essere eseguito il workflow in base all'utente proprietario dei record e del workflow.
+
+Un workflow dunque non è altro che una sequenza di passaggi che vengono eseguiti sul CRM. Possono essere condizionali, di attesa o azioni. I primi due tipi sono autoesplicativi mentre nell'ultimo abbiamo ad esempio la creazione o l'aggiornamento di un record, l'assegnamento di un record a un utente, l'invio di un email, l'esecuzione di uno step custom programmato in .NET da uno sviluppatore oppure l'interruzione dell'esecuzione del workflow.
+
+\subsection{Plugin}
+Un \textit{Plugin} è pezzo di software che si integra con Microsoft Dynamics CRM per modificare o estenderne il comportamento standard. I plugin si comportano come gestori di eventi o \textit{event handler} e vengono eseguiti in seguito a un particolare evento nel CRM, specificato in fase di registrazione del plugin. Possono essere scritti in linguaggio C\# oppure Visual Basic e possono essere eseguiti in modalità sincrona o asincrona.
+
+Come esempi di scenari in cui un Plugin può essere utilizzato abbiamo:
+\begin{itemize}
+  \item È necessario eseguire delle operazioni in modo automatico in seguito all'aggiornamento di alcuni determinati campi di un record, oppure aggiornare altri record collegati in seguito alla modifica o alla creazione di un record nel CRM.
+  \item Si vuole chiamare un servizio web esterno in seguito a un evento come la creazione o l'aggiornamento di un record.
+  \item È necessario compilare in modo dinamico i valori di alcuni campi di un record.
+  \item Si vuole automatizzare dei processi come l'invio di email in seguito a specifici eventi nel CRM.
+\end{itemize}
+
+La pipeline di un plugin è divisa in molteplici fasi su cui può essere registrata la logica del plugin. La fase (in inglese \textit{stage}) indica in quale punto del ciclo di esecuzione del plugin deve essere eseguito il codice. In tabella~\ref{table:pluginStages} si possono consultare le fasi per cui è possibile registrare un plugin.  
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{plugin-pipeline.png}
+  \caption{Pipeline di un Plugin}
+  \label{fig:pluginPipeline}
+\end{figure}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{p{0.15\textwidth}lp{0.55\textwidth}}
+    \toprule
+      \textbf{Evento} & \textbf{Nome della fase} & \textbf{Descrizione} \\
+    \midrule
+      Pre-Event & Pre-validation &  Fase della pipeline per i plugin che devono essere eseguiti prima la MainOperation. I plugin registrati in questa fase possono essere eseguiti all'esterno della transazione del database. \\
+    \midrule
+      Pre-Event & Pre-operation & ase della pipeline per i plugin che devono essere eseguiti prima la MainOperation. I plugin registrati in questa fase sono eseguiti all'interno della transazione del database. \\
+    \midrule
+      Platform Core Operation & MainOperation &  L'operazione principale eseguita dal sistema, come creazione, aggiornamento, eliminazione di un record. Nessun plugin può essere registrato per questa fase. \\
+    \midrule
+      PostEvent & Post-operation &  Fase della pipeline per i plugin che devono essere eseguiti dopo la MainOperation. I plugin registrati in questa fase sono eseguiti all'interno della transazione del database. \\
+    \bottomrule
+  \end{tabular}
+  \caption{Fasi del ciclo di esecuzione di un Plugin}
+  \label{table:pluginStages}
+\end{table}
+
+Ogni volta che il CRM invoca un evento, come ad esempio il salvataggio di un record, viene eseguita una sequenza di azioni.
+Per prima cosa l'evento innesca la chiamata al CRM Organization Web Service e l'esecuzione viene fatta passare attraverso le fasi della pipeline. Internamente le informazioni vengono trasmesse mediante un messaggio di tipo OrganizationRequest il quale viene intercettato dai plugin di tipo Pre-Event che possono modificarne le informazioni prima che venga passato alla Platform Core Operation. Dopodichè il messaggio viene trasformato in un OrganizationResponse che viene intercettato dai plugin Post-Operation i quali possono modificarne le informazioni prima.
+Infine l'esecuzione viene ritornata all'applicazione che ha invocato l'evento.
+
+Il \textit{Message} di un plugin specifica, come nel caso dei Workflow, il tipo di evento su cui il plugin è registrato. Per esempio un plugin può essere registrato su un Create Message di un'entità Contact. In questo caso il codice del plugin verrebbe eseguito ogni qual volta un record Contact viene creato. Per le entità di default del CRM sono supportati più di 100 message diversi, mentre per le entità custom la scelta è più limitata.
+
+\subsubsection{Differenze tra Workflow e Plugin}
+Sia i Workflow che i Plugin possono essere utilizzati per estendere e le funzionalità del CRM. In molti casi i due approcci sono intercambiabili e possono essere utilizzati uno al posto dell'altro senza nessun problema. 
+Tuttavia la documentazione ufficiale Microsoft~\cite{PluginVSWorkflow} suggerisce alcune linee guida riportate in tabella~\ref{table:pluginVsWorkflow}. Inoltre i colleghi più esperti mi hanno spiegato che in generale preferiscono usare i plugin in caso di logica sincrona oppure molto complessa, mentre i workflow per la logica asincrona, oltre al fatto che prediligono i workflow per processi semplici e da eseguire in seguito a una richiesta dell'utente, come ad esempio l'invio automatico di email.
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{p{0.14\textwidth}p{0.39\textwidth}p{0.39\textwidth}}
+    \toprule
+      \textbf{Criterio} & \textbf{Plugin} & \textbf{Workflow} \\
+    \midrule
+    Eseguito prima o dopo la Core Platform Operation & Viene eseguito immediatamente prima o dopo la core operation (sincrono). Può essere messo in coda ed eseguito dopo la core operation (asincrono) & Viene messo in coda ed eseguito dopo la core operation \\
+    \midrule
+    Impatto sulle perfomance del CRM & Plugin sincroni possono aumentare i tempi di risposta del CRM in quanto fanno parte dei processi della piattaforma. Un plugin mal implementato può bloccare il CRM & L'impatto negativo sui tempi di risposta del CRM è minimo. \\
+    \midrule
+    Restrizioni di sicurezza & Per registrare un plugin è necessario un utente con i privilegi di System Admin o System Customizer che sia membro del Deployment Administrator group & Gli utenti posson creare workflow in modo interattivo all-interno dell'interfaccia web. Tuttavia per poter registrare un workflow è necessario avere gli stessi privilegi di sicurezza richiesti per i plugin. \\
+    \midrule
+    Migliore per operazioni che richiedono molto o poco tempo & I plugin ad esecuzione sincrona andrebbero usati per processi brevi mentre i plugin asincroni per operazioni più intensive. & Indifferentemente per processi brevi o lunghi. \\
+    \midrule
+    Persistenza del processo e dei dati & I plugin vengono eseguiti fino al completamento & I workflow possono essere messi in pausa, posposti, cancellati e ripresi mediante chiamate all'SDK o dall'utente mediante l'interfaccia web del CRM. Lo stato di un Workflow viene salvato automaticamente prima di essere messo in pausa o posposto. \\
+    \bottomrule
+  \end{tabular}
+  \caption{Come scegliere se utilizzare un Plugin o un Workflow}
+  \label{table:pluginVsWorkflow}
+\end{table}
+
+\subsection{Soluzioni}
+Le \textit{Solutioni} sono il modo con cui è possibile firmare, impacchettare e manutenere le unità software che estendono il CRM~\cite{Solutions}. Qualsiasi customizzazione, estensione, o configurazione può essere impacchettata, organizzata e distribuita usando le soluzioni. Una soluzione può essere esportata come file .zip e importata in seguito in un altra istanza di Dynamics 365. 
+\subsubsection{Tipi di soluzioni}
+Esistono tre tipi di soluzioni: la Default System Solution, le soluzioni Managed e le soluzioni Unmanaged.
+
+La prima contiene tutti i componenti definiti di default in Microsoft Dynamics CRM senza alcuna customizzazione. Questi componenti possono essere modificati e le versioni modificate possono essere inserite in soluzioni di tipo Managed o Unmnaged.
+
+Una soluzione Managed è una soluzione che si intende distribuire e installare nel CRM del cliente. In particolare può essere installata sulla soluzione di default o su altre soluzioni managed. Su una soluzione di questo tipo non è possibile quindi aggiungere o rimuovere componenti, è tuttavia permessa la modifica dei componenti presenti.
+
+Una soluzione unmanaged è una soluzione da considerarsi ancora in fase di sviluppo e che non si intende distribuire. In una soluzione unmanaged è possibile aggiungere, rimuovere, modificare e eliminare componenti. Ogni nuova soluzione inoltre è di default impostata di tipo unmanaged.
+
+\section{Microsoft Power Platform}
