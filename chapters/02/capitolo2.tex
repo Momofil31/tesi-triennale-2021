@@ -5,22 +5,21 @@ In questo capitolo viene effettuata un'analisi dettagliata delle tecnologie Micr
 
 \section{Microsoft Dynamics CRM}
 
-Microsoft Dynamics CRM\footnote{Devo davvero ringraziare Tutorialspoint perché la sua guida~\cite{DynamicsTutorialspoint}, su cui mi sono basato per l'elaborazione di questa sezione, mi ha chiarito moltissimi dubbi che la documentazione ufficiale (estremamente confusionaria) e i colleghi in azienda non sono riusciti a risolvermi.} è un pacchetto software per la gestione delle relazioni con il cliente sviluppato da Microsoft. Di base si concentra principalmente sui settori Vendite, Marketing e Servizio Clienti, anche se è interamente customizzabile grazie al framework proprietario Microsoft XRM SDK  basato su .NET.
+Microsoft Dynamics CRM\footnote{Devo davvero ringraziare Tutorialspoint perché la sua guida~\cite{DynamicsTutorialspoint}, su cui mi sono basato per l'elaborazione di questa sezione, mi ha chiarito moltissimi dubbi che la documentazione ufficiale (estremamente confusionaria) e i colleghi in azienda non sono riusciti a risolvermi.} è un pacchetto software per la gestione delle relazioni con il cliente sviluppato da Microsoft. Seppure interamente customizzabile grazie al framework proprietario Microsoft XRM SDK basato su .NET, di base si concentra sui settori Vendite, Marketing e Servizio Clienti.
 
-Il CRM può essere utilizzato per aumentare la produttività delle vendite e l'efficacia del marketing per un'organizzazione, gestire l'intera catena di assistenza clienti e fornire informazioni sui social, business intelligence e molte altre funzionalità e caratteristiche pronte all'uso.
+Il CRM può essere infatti utilizzato per aumentare la produttività delle vendite e l'efficacia del marketing per un'azienda, gestire l'intera catena di assistenza clienti e fornire informazioni sull'andamento dei social media, business intelligence e molte altre caratteristiche e funzionalità pronte all'uso.
 L'interazione utente con Microsoft Dynamics CRM avviene attraverso l'interfaccia web, la quale è ottimizzata anche per l'utilizzo mobile e tablet oltre che desktop.
 
 \subsection{Moduli Funzionali}
-Il CRM è interamente progettato sui moduli funzionali Sales, Marketing e Service Management . Questi moduli funzionali sono spesso chiamati \textit{Work Areas}.
-Questa divisione in moduli è dovuta al fatto che un'azienda, nell'utilizzare il CRM per gestire i propri processi, necessita che gli utenti del settore vendite, ad esempio, abbiano a disposizione delle funzionalità specifiche disponibili nel modulo Sales, e parimenti gli utenti del settore marketing con il modulo Marketing e gli utenti del servizio clienti con il modulo Service Management.
+Il CRM è interamente progettato sui moduli funzionali Sales, Marketing e Service Management. Questa divisione in moduli è dovuta al fatto che un'azienda, nell'utilizzare il CRM per gestire i propri processi, necessita che gli utenti del settore vendite, ad esempio, abbiano a disposizione delle funzionalità specifiche disponibili nel modulo Sales, parimenti gli utenti del settore marketing con il modulo Marketing e gli utenti del servizio clienti con il modulo Service Management.
 
 \subsubsection{Modulo Sales}
-Il modulo Sales del CRM è progettato per gestire l'intero ciclo di vita di un nuovo cliente. Consiste dei seguenti sotto-moduli:
+Il modulo Sales del CRM è progettato per gestire l'intero ciclo di vita di un nuovo cliente. Si compone dei seguenti sotto-moduli:
 \begin{itemize}
-  \item \textbf{Leads} - Rappresenta una persona o un organizzazinoe che può diventare un potenziale cliente in futuro. Questo è il primo passaggio per l'inserimento di un potenziale cliente nel sistema.
-  \item \textbf{Opportunities} - Rappresenta una potenziale vendita al cliente. Quando un Lead mostra interesse nell'offerta, viene convertita in Opportunity. Un Opportunity può essere vinta o persa.
-  \item \textbf{Accounts} - Rappresenta un'azienda con cui si ha una relazione. Qunado un'Opportunity è vinta, viene convertita in un Account o un Contact.
-  \item \textbf{Contacts} - Rappresenta una persona o un individuo con cui l'azienda ha una relazione. In genere un Contact è un cliente (ad esempio tutti gli intestatari di un conto presso per una banca).
+  \item \textbf{Leads} - Rappresenta una persona o un'organizzazione che può diventare un potenziale cliente. Questo è il primo passaggio per l'inserimento di un potenziale cliente nel sistema.
+  \item \textbf{Opportunities} - Rappresenta una potenziale vendita al cliente. Quando un Lead mostra interesse nell'offerta, viene convertita in Opportunity. Un'Opportunity può essere vinta o persa.
+  \item \textbf{Accounts} - Rappresenta un'azienda con cui si ha una relazione. Quando un'Opportunity è vinta, viene convertita in un Account o un Contact.
+  \item \textbf{Contacts} - Rappresenta una persona o un individuo con cui l'azienda ha una relazione. In genere, un Contact è un cliente (ad esempio tutti gli intestatari di un conto presso per una banca).
   \item \textbf{Competitors} - Gestisce i concorrenti di mercato dell'azienda.
   \item \textbf{Products} - Gestisce i prodotti offerti dall'azienda ai clienti.
   \item \textbf{Quotes} - Preventivo formale di prodotti o servizi proposti a prezzi specifici a un potenziale cliente.
@@ -29,33 +28,34 @@ Il modulo Sales del CRM è progettato per gestire l'intero ciclo di vita di un n
 \end{itemize}
 
 \subsubsection{Modulo Marketing}
-Il modulo Marketing del CRM è progettato per gestire l'intero processo di marketing di un'azienda per i suoi clienti esistenti e potenziali. Consiste dei seguenti sotto-moduli, i quali funzionano in coordinazione con il modulo Sales:
+Il modulo Marketing del CRM è progettato per gestire l'intero processo di marketing di un'azienda per i suoi clienti esistenti e potenziali. Si compone dei seguenti sotto-moduli, i quali funzionano in coordinazione con il modulo Sales:
 \begin{itemize}
-  \item \textbf{Marketing Lists} - Fornisce un metodo per raggruppare Contact, Account e Lead e interagire con essi attraverso l'invio di email promozionali, detagli di eventi, newsletter e altre comunicazioni rilevanti per il cliente. È possibile definire dei criteri per creare le Marketing List.
-  \item \textbf{Campaigns} - Servono a misurare l'efficacia e il completamento di uno specifico risultato, come l'introduzione di un nuovo prodotto o l'incremento della quota di mercato e può includere diversi canali di comunicazione come email e altre forme pobblicitarie.
-  \item \textbf{Quick Campaigns} - Simile a una Campaign ma può essere messa in relazione con un solo tipo di Activity.
+  \item \textbf{Marketing Lists} - Fornisce un metodo per raggruppare Contact, Account e Lead e interagire con essi attraverso l'invio di email promozionali, dettagli di eventi, newsletter e altre comunicazioni rilevanti per il cliente. È possibile definire dei criteri per creare le Marketing List.
+  \item \textbf{Campaigns} - Servono a misurare l'efficacia e il completamento di uno specifico risultato, come l'introduzione di un nuovo prodotto o l'incremento della quota di mercato e può includere diversi canali di comunicazione come email e altre forme pubblicitarie.
+  \item \textbf{Quick Campaigns} - Simile a una Campaign ma può essere messa in relazione con un solo tipo di Activity\footnote{Vedi sottosezione Gestione attività.}.
 \end{itemize}
 
 \subsubsection{Modulo Service}
-Il modulo Service del CRM è progettato per gestire e tracciare le operazioni di servizio clienti di un azienda come il supporto ai servizi basati su incidenti/casi, pianificazione di interventi di supporto ai clienti eccetera. Consiste dei seguenti sotto-moduli:
+Il modulo Service del CRM è progettato per gestire e tracciare le operazioni di servizio clienti di un'azienda come il supporto ai servizi basati su incidenti/casi, pianificazione di interventi di supporto ai clienti, eccetera. Si compone dei seguenti sotto-moduli:
 \begin{itemize}
   \item \textbf{Cases} - Permette di tracciare una qualsiasi richiesta, problema o lamentela di un cliente. Un Case ha un processo di risoluzione composto di vari stati che terminano con la risoluzione o la chiusura del Case.
   \item \textbf{Knowledge Base} - Mantiene una collezione d tutte le domande e risposte più comuni.
-  \item \textbf{Contracts} - In relazione con Cases indica i contratti che il cliente ha.
+  \item \textbf{Contracts} - In relazione con Cases indica i contratti attivi del cliente.
   \item \textbf{Resources/Resouce Groups} - Rappresenta le persone, strumenti, luoghi o l'attrezzatura necessaria per fornire un servizio. Possono essere utilizzate per risolvere uno specifico problema di un cliente.
-  \item \textbf{Services} - Rappresentano i servizi di assistenza che l'azienda offre ai clienti
+  \item \textbf{Services} - Rappresentano i servizi di assistenza che l'azienda offre ai clienti.
   \item \textbf{Service Calendar} - Permette di organizzare le operazioni di assistenza.
 \end{itemize}
 
 \subsubsection{Gestione attività}
-Tutti i moduli precedentemente trattati fanno uso del modulo Activity Management del CRM. Un \textit{activity} rappresenta qualsiasi tipo di interazione con il cliente come telefonate, email, lettere, appuntamenti e altro ancora. Queste \textit{activity} possono essere messe in relazione con le altre entità trattate precedentemente appartenenti ai vari moduli del CRM.
+\label{sssec:gestione-attivita}
+Tutti i moduli precedentemente trattati fanno uso del modulo Activity Management del CRM. Un'\textit{activity} rappresenta qualsiasi tipo di interazione con il cliente come telefonate, email, lettere, appuntamenti e altro ancora. Queste \textit{activity} possono essere messe in relazione con le altre entità trattate precedentemente appartenenti ai vari moduli del CRM.
 
 \subsection{Entità e Record}
-Un \textit{entità} è utilizzata per modellare dei dati nel CRM. Contact, Case, Account, Lead sono tutte entità del CRM che vengono istanziate in record. A livello concettuale un'entità è equivalente a una tabella di un database relazionale.
+Un'\textit{entità} è utilizzata per modellare dei dati nel CRM. Contact, Case, Account e Lead sono tutte entità del CRM che possono essere istanziate in record. A livello concettuale un'entità è equivalente a una tabella di un database relazionale.
 
 Oltre alle entità presenti di default nel CRM è possibile definire nuove entità custom in base alle necessità specifiche, oppure modificare quelle esistenti aggiungendo o eliminando campi.
 
-Il CRM fornisce 11 tipi di campi:
+Il CRM fornisce undici tipi di campi:
 \begin{itemize}
   \item Single Line of Text
   \item Option Set (Dropdown)
@@ -70,11 +70,11 @@ Il CRM fornisce 11 tipi di campi:
   \item Lookup
 \end{itemize} 
 
-A partire dalla versione 2011 inoltre è disponibile un particolare tipo di campo chiamato Party List. Questo tipo consente di mappare una relazione tra entità come nel caso del tipo Lookup ma con la differenza che quest'ultimo può mappare una relazione con una singola entità mentre un campo di tipo Party List permette di avere una relazione con entità multiple. Per esempio una email può essere associata a un Contact, un User o una Queue.
+A partire dalla versione 2011 inoltre è disponibile un particolare tipo di campo chiamato Party List. Questo tipo consente di mappare una relazione tra entità come nel caso del tipo Lookup ma con la differenza che quest'ultimo può mappare una relazione con una singola entità mentre un campo di tipo Party List permette di avere una relazione con entità multiple. Per esempio, una email può essere associata a un Contact, un User o una Queue.
 
 \subsection{Moduli (Forms)}
 Per creare, aggiornare o modificare un record nel CRM si utilizzano i Form. Ad ogni entità possono dunque essere associati uno o più Form. A seconda dell'opzione di visualizzazione scelta, del modulo funzionale selezionato o del tipo di utente che interagisce con il CRM possono essere visualizzati Form diversi. 
-I form possono essere creati attraverso un interfaccia apposita presente nelle impostazioni di customizzazione del CRM.
+I form possono essere creati attraverso un'interfaccia apposita presente nelle impostazioni di customizzazione del CRM.
 \begin{figure}[ht!]
   \centering
   \includegraphics[width=0.7\textwidth]{form-example.png}
@@ -83,7 +83,7 @@ I form possono essere creati attraverso un interfaccia apposita presente nelle i
 \end{figure}
 
 \subsection{Ricerca e Ricerca Avanzata}
-Una delle più importatanti funzionalità già pronte di Microsoft Dynamics CRM si trova nelle sue capacità di ricerca, le quali forniscono la possibilità di costruire \textit{query} e filtri molto avanzati senza la necessità da parte dell'utente di conoscere linguaggi di programmazione o di querying.
+Una delle più importanti funzionalità predefinite di Microsoft Dynamics CRM si trova nelle sue capacità di ricerca, le quali forniscono la possibilità di costruire \textit{query} e filtri molto avanzati senza la necessità da parte dell'utente di conoscere linguaggi di programmazione o di querying.
 
 Di default la vista a griglia di ogni entità supporta una funzionalità di Ricerca Veloce mediante una barra di ricerca posizionata nell'interfaccia utente in alto a destra come si può osservare in figura~\ref{fig:quickSearch}.
 \begin{figure}[ht]
@@ -93,7 +93,7 @@ Di default la vista a griglia di ogni entità supporta una funzionalità di Rice
   \label{fig:quickSearch}
 \end{figure}
 
-Cliccando invece sull'icona cerchiata in rosso in figura~\ref{fig:quickSearch} si accede alla ricerca avanzata, disponibile in una nuova finestra. La ricerca avanzata del CRM è una delle funzionalità più utili e potenti disponibili di default. In questa finestra, come si vede in figura~\ref{fig:advancedSearch} è possibile selezionare l'entità di cui di vogliono cercare i record, applicare filtri e criteri di raggruppamento e salvare i riultati come viste (\textit{views}) personali.
+Cliccando invece sull'icona cerchiata in rosso in figura~\ref{fig:quickSearch} si accede alla ricerca avanzata, disponibile in una nuova finestra. La ricerca avanzata del CRM è una delle funzionalità più utili e potenti disponibili di default. In questa finestra, come si vede in figura~\ref{fig:advancedSearch}, è possibile selezionare l'entità di cui di vogliono cercare i record, applicare filtri e criteri di raggruppamento e salvare i risultati come viste (\textit{views}) personali.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.7\textwidth]{advanced-search.png}
@@ -103,7 +103,7 @@ Cliccando invece sull'icona cerchiata in rosso in figura~\ref{fig:quickSearch} s
 
 \subsection{Web Resources}
  Le \textit{Web Resources} nel CRM sono i file virtuali salvati nel database del CRM e usati per implementare le funzionalità della pagine web del CRM. Questi file possono essere HTML, Javascript, Silverlight o di qualsiasi altro tipo supportato. 
- Nonostante il CRM venga fornito da Microsoft con una serie di funzionalità di base, spesso si rende necessario estendere e personalizzare queste funzionalità per rispettare e implemente i requisiti del progetto in questione. L'estensione delle funzionalità può avvenire in genere in due modi:
+ Nonostante il CRM venga fornito da Microsoft con una serie di funzionalità di base, spesso si rende necessario estendere e personalizzare queste funzionalità per rispettare e implementare i requisiti del progetto in questione. Tali estensioni possono avvenire in genere in due modi:
  \begin{itemize}
    \item \textbf{Estensione lato client} - Usando le Web Resources e il \textit{Form Scripting}.
    \item \textbf{Estensione lato server} - Mediante \textit{Plugin}, \textit{Workflow} e \textit{Web Services}.
@@ -111,13 +111,13 @@ Cliccando invece sull'icona cerchiata in rosso in figura~\ref{fig:quickSearch} s
 
 Per capire quando può essere necessario l'utilizzo delle Web Resources del CRM prendiamo in considerazione i seguenti esempi: 
 \begin{itemize}
-  \item Si rende necessario fare ulteriori validazionei lato client sui campi di un form del CRM.
-  \item È necessario costruire una o più pagine completamente custom diverse che utilizzino dati provenienti da altri sistemi esterni al CRM.
+  \item Si rende necessario fare ulteriori validazioni lato client sui campi di un form del CRM.
+  \item È necessario costruire una o più pagine completamente custom che utilizzino dati provenienti da sistemi esterni al CRM.
   \item Si vogliono applicare modifiche visive o funzionali all'interfaccia grafica standard del CRM.
-  \item Si vuole richiaramare l'esecuzione di servizi web esterni in seguito ad azioni lato client, senza dover scomodare l'utilizzo di plugin o workflow lato server.
+  \item Si vuole richiamare l'esecuzione di servizi web esterni in seguito ad azioni lato client, senza dover scomodare l'utilizzo di plugin o workflow lato server.
 \end{itemize}
 
-L'accesso a una Web Resource può avvenire mediante il suo URL univoco. Dato che le Web Resource vengono salvate nel database del CRM, possono essere caricate come singolo file o come collezione eterogenea di file (HTML, Javascript, ecc.) oppure possono essere create e/o modificate direttamente dal CRM, mediante un pannello apposito. Questo consente inoltre di semplificare i passaggi in caso di migrazione da un ambiente a un altro, come per qualsiasi altra personalizzazione del CRM. In tabella~\ref{table:webResourceType} vi è un elendo dei principali tipi di web resource supportati.
+L'accesso a una Web Resource può avvenire mediante il suo URL univoco. Dato che le Web Resource vengono salvate nel database del CRM, possono essere caricate come singolo file o come collezione eterogenea di file (HTML, Javascript, ecc.) oppure possono essere create e/o modificate direttamente dal CRM, mediante un pannello apposito. Questo consente inoltre di semplificare i passaggi in caso di migrazione da un ambiente a un altro, come per qualsiasi altra personalizzazione del CRM. In tabella~\ref{table:webResourceType} vi è un elenco dei principali tipi di web resource supportati.
 
 \begin{table}[ht]
   \centering
@@ -125,7 +125,7 @@ L'accesso a una Web Resource può avvenire mediante il suo URL univoco. Dato che
     \toprule
       \textbf{Tipo di Web Resource} & \textbf{Esempio} \\ 
     \midrule
-      Pagina Web (HTML) & È possibile creare una qualsiasi pagina HTML e inserirela in un form del CRM. \\
+      Pagina Web (HTML) & È possibile creare una qualsiasi pagina HTML e inserirla in un form del CRM. \\
       \midrule 
       Fogli di stile (CSS) & Qualsiasi file css che può essere usato insieme ai file HTML. \\ 
       \midrule
@@ -145,20 +145,20 @@ L'accesso a una Web Resource può avvenire mediante il suo URL univoco. Dato che
 \end{table}
 
 \subsection{Workflow}
-I \textit{Workflow} permettono di automatizzare processi di business all'interno del CRM. Possono essere creati utilizzando le funzionalità del CRM oppure mediante lo sviluppo di codice .NET, consigliato nel caso di worflow più complessi. I workflow possono essere eseguiti in background oppure in tempo reale e possono richiedere anche l'input dell'utente.
+I \textit{Workflow} permettono di automatizzare processi di business all'interno del CRM. Possono essere creati utilizzando le funzionalità del CRM oppure mediante lo sviluppo di codice .NET, consigliato nel caso di worflow più complessi. I workflow possono essere eseguiti in background oppure in tempo reale e possono anche richiedere l'input dell'utente.
 
-L'esecuzione di un workflow può essere iniziata in base a specifiche condizioni oppure manualmente dall'utente (ad esempio tramite la pressione di un pulsante o la selezione di un'opzione nel CRM). Internamente i workflow sono implementati utilizzando Windows Workflow Foundation, una tecnologia Microsoft che fornisce un'API, un motore di workflow e un designer per implementare workflow all'interno di applicazioni .NET.
+L'esecuzione di un workflow può essere avviata automaticamente, in base a specifiche condizioni, oppure manualmente dall'utente (ad esempio tramite la pressione di un pulsante o la selezione di un'opzione nel CRM). Internamente i workflow sono implementati utilizzando Windows Workflow Foundation, una tecnologia Microsoft che fornisce un'API, un motore di workflow e un designer per implementare workflow all'interno di applicazioni .NET.
 
 I workflow del CRM possono essere eseguiti in maniera sincrona o asincrona. In genere, si utilizza l'approccio asincrono, facendo eseguire il workflow in background in quanto in questo modo si può limitare l'utilizzo di risorse del sistema.
 
-L'esecuzione di un workflow può avvenire in seguito a specifici eventi definiti dal \textit{Message} del workflow (ovvero il tipo di evento sul quale un Workflow può essere registrato) i quali possono essere creazione, modifica di uno o più valori, eliminazione di un record. Un workflow può inoltre avere uno \textit{scope} (in italiano "ambito di lavoro") che può essere User, Business Unit, Parent Child Business Unit o Organization. È possibile quindi specificare su quali record potrà essere eseguito il workflow in base all'utente proprietario dei record e del workflow.
+L'esecuzione di un workflow può avvenire in seguito a specifici eventi definiti dal \textit{Message} del workflow (ovvero il tipo di evento sul quale un Workflow può essere registrato) i quali possono essere creazione, modifica di uno o più valori o eliminazione di un record. Un workflow può inoltre, avere uno \textit{scope} (in italiano "ambito di lavoro") che può essere User, Business Unit, Parent Child Business Unit o Organization. È possibile quindi specificare su quali record potrà essere eseguito il workflow in base all'utente proprietario dei record e del workflow.
 
-Un workflow dunque non è altro che una sequenza di passaggi che vengono eseguiti sul CRM. Possono essere condizionali, di attesa o azioni. I primi due tipi sono autoesplicativi mentre nell'ultimo abbiamo ad esempio la creazione o l'aggiornamento di un record, l'assegnamento di un record a un utente, l'invio di un email, l'esecuzione di uno step custom programmato in .NET da uno sviluppatore oppure l'interruzione dell'esecuzione del workflow.
+Un workflow dunque non è altro che una sequenza di passaggi che vengono eseguiti sul CRM. Possono essere condizionali, di attesa o azioni. I primi due tipi sono auto esplicativi mentre nel terzo si può avere ad esempio la creazione o l'aggiornamento di un record, l'assegnamento di un record a un utente, l'invio di un'email, l'esecuzione di uno step custom programmato in .NET da uno sviluppatore oppure l'interruzione dell'esecuzione del workflow.
 
 \subsection{Plugin}
-Un \textit{Plugin} è pezzo di software che si integra con Microsoft Dynamics CRM per modificare o estenderne il comportamento standard. I plugin si comportano come gestori di eventi o \textit{event handler} e vengono eseguiti in seguito a un particolare evento nel CRM, specificato in fase di registrazione del plugin. Possono essere scritti in linguaggio C\# oppure Visual Basic e possono essere eseguiti in modalità sincrona o asincrona.
+Un \textit{Plugin} è pezzo di software che si integra con Microsoft Dynamics CRM per modificarne o estenderne il comportamento standard. I plugin si comportano come gestori di eventi (\textit{event handler}) e vengono eseguiti in seguito a un particolare evento nel CRM, specificato in fase di registrazione del plugin. Possono essere scritti in linguaggio C\# oppure Visual Basic e possono essere eseguiti in modalità sincrona o asincrona.
 
-Come esempi di scenari in cui un Plugin può essere utilizzato abbiamo:
+Alcuni esempi di scenari in cui un Plugin può essere utilizzato sono:
 \begin{itemize}
   \item È necessario eseguire delle operazioni in modo automatico in seguito all'aggiornamento di alcuni determinati campi di un record, oppure aggiornare altri record collegati in seguito alla modifica o alla creazione di un record nel CRM.
   \item Si vuole chiamare un servizio web esterno in seguito a un evento come la creazione o l'aggiornamento di un record.
@@ -183,7 +183,7 @@ La pipeline di un plugin è divisa in molteplici fasi su cui può essere registr
     \midrule
       Pre-Event & Pre-validation &  Fase della pipeline per i plugin che devono essere eseguiti prima la MainOperation. I plugin registrati in questa fase possono essere eseguiti all'esterno della transazione del database. \\
     \midrule
-      Pre-Event & Pre-operation & ase della pipeline per i plugin che devono essere eseguiti prima la MainOperation. I plugin registrati in questa fase sono eseguiti all'interno della transazione del database. \\
+      Pre-Event & Pre-operation & Fase della pipeline per i plugin che devono essere eseguiti prima la MainOperation. I plugin registrati in questa fase sono eseguiti all'interno della transazione del database. \\
     \midrule
       Platform Core Operation & MainOperation &  L'operazione principale eseguita dal sistema, come creazione, aggiornamento, eliminazione di un record. Nessun plugin può essere registrato per questa fase. \\
     \midrule
@@ -195,14 +195,14 @@ La pipeline di un plugin è divisa in molteplici fasi su cui può essere registr
 \end{table}
 
 Ogni volta che il CRM invoca un evento, come ad esempio il salvataggio di un record, viene eseguita una sequenza di azioni.
-Per prima cosa l'evento innesca la chiamata al CRM Organization Web Service e l'esecuzione viene fatta passare attraverso le fasi della pipeline. Internamente le informazioni vengono trasmesse mediante un messaggio di tipo OrganizationRequest il quale viene intercettato dai plugin di tipo Pre-Event che possono modificarne le informazioni prima che venga passato alla Platform Core Operation. Dopodichè il messaggio viene trasformato in un OrganizationResponse che viene intercettato dai plugin Post-Operation i quali possono modificarne le informazioni prima.
-Infine l'esecuzione viene ritornata all'applicazione che ha invocato l'evento.
+Per prima cosa l'evento innesca la chiamata al CRM Organization Web Service e l'esecuzione viene fatta passare attraverso le fasi della pipeline. Internamente le informazioni vengono trasmesse mediante un messaggio di tipo OrganizationRequest il quale viene intercettato dai plugin di tipo Pre-Event che possono modificarne le informazioni prima che venga passato alla Platform Core Operation. Dopodiché il messaggio viene trasformato in un OrganizationResponse che viene intercettato dai plugin Post-Operation i quali possono modificarne le informazioni prima.
+Infine, l'esecuzione viene ritornata all'applicazione che ha invocato l'evento.
 
-Il \textit{Message} di un plugin specifica, come nel caso dei Workflow, il tipo di evento su cui il plugin è registrato. Per esempio un plugin può essere registrato su un Create Message di un'entità Contact. In questo caso il codice del plugin verrebbe eseguito ogni qual volta un record Contact viene creato. Per le entità di default del CRM sono supportati più di 100 message diversi, mentre per le entità custom la scelta è più limitata.
+Il \textit{Message} specifica, come nel caso dei Workflow, il tipo di evento su cui il plugin è registrato. Per esempio, un plugin può essere registrato su un Create Message di un'entità Contact. In questo caso il codice del plugin verrebbe eseguito ogni qual volta un record Contact viene creato. Per le entità di default del CRM sono supportati più di 100 message diversi, mentre per le entità custom la scelta è più limitata.
 
 \subsubsection{Differenze tra Workflow e Plugin}
 Sia i Workflow che i Plugin possono essere utilizzati per estendere e le funzionalità del CRM. In molti casi i due approcci sono intercambiabili e possono essere utilizzati uno al posto dell'altro senza nessun problema. 
-Tuttavia la documentazione ufficiale Microsoft~\cite{PluginVSWorkflow} suggerisce alcune linee guida riportate in tabella~\ref{table:pluginVsWorkflow}. Inoltre i colleghi più esperti mi hanno spiegato che in generale preferiscono usare i plugin in caso di logica sincrona oppure molto complessa, mentre i workflow per la logica asincrona, oltre al fatto che prediligono i workflow per processi semplici e da eseguire in seguito a una richiesta dell'utente, come ad esempio l'invio automatico di email.
+Tuttavia, la documentazione ufficiale Microsoft~\cite{PluginVSWorkflow} suggerisce alcune linee guida riportate in tabella~\ref{table:pluginVsWorkflow}. Inoltre, i colleghi più esperti mi hanno spiegato che in generale preferiscono usare i plugin in caso di logica sincrona oppure molto complessa, mentre i workflow per la logica asincrona o per processi semplici e da eseguire in seguito a una richiesta dell'utente, come ad esempio l'invio automatico di email.
 
 \begin{table}[ht]
   \centering
@@ -214,7 +214,7 @@ Tuttavia la documentazione ufficiale Microsoft~\cite{PluginVSWorkflow} suggerisc
     \midrule
     Impatto sulle perfomance del CRM & Plugin sincroni possono aumentare i tempi di risposta del CRM in quanto fanno parte dei processi della piattaforma. Un plugin mal implementato può bloccare il CRM & L'impatto negativo sui tempi di risposta del CRM è minimo. \\
     \midrule
-    Restrizioni di sicurezza & Per registrare un plugin è necessario un utente con i privilegi di System Admin o System Customizer che sia membro del Deployment Administrator group & Gli utenti posson creare workflow in modo interattivo all'interno dell'interfaccia web. Tuttavia per poter registrare un workflow è necessario avere gli stessi privilegi di sicurezza richiesti per i plugin. \\
+    Restrizioni di sicurezza & Per registrare un plugin è necessario un utente con i privilegi di System Admin o System Customizer che sia membro del Deployment Administrator group & Gli utenti possono creare workflow in modo interattivo all'interno dell'interfaccia web. Tuttavia, per poter registrare un workflow è necessario avere gli stessi privilegi di sicurezza richiesti per i plugin. \\
     \midrule
     Migliore per operazioni che richiedono molto o poco tempo & I plugin ad esecuzione sincrona andrebbero usati per processi brevi mentre i plugin asincroni per operazioni più intensive. & Indifferentemente per processi brevi o lunghi. \\
     \midrule
@@ -226,29 +226,29 @@ Tuttavia la documentazione ufficiale Microsoft~\cite{PluginVSWorkflow} suggerisc
 \end{table}
 
 \subsection{Soluzioni}
-Le \textit{Solutioni} sono il modo con cui è possibile firmare, impacchettare e manutenere le unità software che estendono il CRM~\cite{Solutions}. Qualsiasi customizzazione, estensione, o configurazione può essere impacchettata, organizzata e distribuita usando le soluzioni. Una soluzione può essere esportata come file .zip e importata in seguito in un altra istanza di Dynamics 365. 
+Le soluzioni sono il modo con cui è possibile firmare, impacchettare e manutenere le unità software che estendono il CRM~\cite{Solutions}. Qualsiasi customizzazione, estensione, o configurazione può essere impacchettata, organizzata e distribuita usando le soluzioni. Una soluzione può essere esportata come file .zip e importata in seguito in un'altra istanza di Dynamics 365. 
 \subsubsection{Tipi di soluzioni}
 Esistono tre tipi di soluzioni: la Default System Solution, le soluzioni Managed e le soluzioni Unmanaged.
 
-La prima contiene tutti i componenti definiti di default in Microsoft Dynamics CRM senza alcuna customizzazione. Questi componenti possono essere modificati e le versioni modificate possono essere inserite in soluzioni di tipo Managed o Unmnaged.
+La prima contiene tutti i componenti definiti di default in Microsoft Dynamics CRM senza alcuna customizzazione. Questi componenti possono essere modificati e le versioni modificate possono essere inserite in soluzioni di tipo Managed o Unmanaged.
 
-Una soluzione Managed è una soluzione che si intende distribuire e installare nel CRM del cliente. In particolare può essere installata sulla soluzione di default o su altre soluzioni managed. Su una soluzione di questo tipo non è possibile quindi aggiungere o rimuovere componenti, è tuttavia permessa la modifica dei componenti presenti.
+Una soluzione Managed è una soluzione che si intende distribuire e installare nel CRM del cliente. In particolare può essere installata sulla soluzione di default o su altre soluzioni Managed. Su una soluzione di questo tipo non è possibile quindi aggiungere o rimuovere componenti, è tuttavia permessa la modifica dei componenti presenti.
 
-Una soluzione unmanaged è una soluzione da considerarsi ancora in fase di sviluppo e che non si intende distribuire. In una soluzione unmanaged è possibile aggiungere, rimuovere, modificare e eliminare componenti. Ogni nuova soluzione inoltre è di default impostata di tipo unmanaged.
+Una soluzione Unmanaged è una soluzione da considerarsi ancora in fase di sviluppo e che non si intende distribuire. In una soluzione Unmanaged è possibile aggiungere, rimuovere, modificare ed eliminare componenti. Ogni nuova soluzione inoltre è impostata di default come di tipo Unmanaged.
 
 \section{Microsoft Power Automate}
 Microsoft Power Automate, in precedenza conosciuto come Microsoft Flow, è un servizio online per la creazione di flussi di lavoro \textit{low-code/no-code} in grado di automatizzare operazioni su diverse app e servizi, sia sviluppati da Microsoft che non.
-È possibile connettersi infatti a più di 220 servizi e gestire i dati sia in cloud che in locale come ad esempio con SharePoint o Microsoft SQL Server. La lista di connettori ad app e servizi disponibili, inoltre è in continua crescita, in quanto Microsoft lavora a stretto contatto con i vari partner per estendere le possibilità di Power Automate.
+È possibile connettersi infatti a più di 220 servizi e gestire i dati sia in cloud che in locale come ad esempio con SharePoint o Microsoft SQL Server. La lista di connettori ad app e servizi disponibili inoltre, è in continua crescita in quanto Microsoft lavora a stretto contatto con i vari partner per estendere le possibilità di Power Automate.
 
 I due principali tipi di flussi di lavoro supportati da Power Automate sono i flussi cloud e i flussi desktop.
 \paragraph{Flussi Cloud} Si dividono in tre tipologie:
 \begin{itemize}
   \item Flussi automatizzati - Permettono di creare un'automazione che viene attivata da un evento come l'arrivo di un email da una persona specifica. 
-  \item Flussi istantanei - Permettono di avviare un automazione facendo click su un pulsante. È possibil automatizzare le azioni ripetitive come ad esempio l'invio di un promemoria su Microsoft Teams
-  \item Flussi pianificati - Permettono di pianificare un'automazione a una specifica ora come ad esempio il caricamento giornaliero di dati in SharePoint o in un database
+  \item Flussi istantanei - Permettono di avviare un'automazione facendo click su un pulsante. È possibile automatizzare le azioni ripetitive come ad esempio l'invio di un promemoria su Microsoft Teams
+  \item Flussi pianificati - Permettono di pianificare un'automazione ad una specifica ora come ad esempio il caricamento giornaliero di dati in SharePoint o in un database
 \end{itemize}
 
-\paragraph{Flussi Desktop} Vengono utilizzati per automatizzare attività ripetitive sul Web o sul desktop. È possibile ad esempio creare flussi per organizzare documenti mendiante azioni su file e cartelle, estrarre dati da siti web e archiviarli su file Excel, inserire fatture in software gestionali e molto altro.
+\paragraph{Flussi Desktop} Vengono utilizzati per automatizzare attività ripetitive sul Web o sul desktop. È possibile ad esempio creare flussi per organizzare documenti mediante azioni su file e cartelle, estrarre dati da siti web e archiviarli su file Excel, inserire fatture in software gestionali e molto altro.
 
 \begin{figure}[ht!]
   \centering
@@ -258,19 +258,19 @@ I due principali tipi di flussi di lavoro supportati da Power Automate sono i fl
 \end{figure}
 
 \subsection{Flussi Cloud}
-In Microsoft Power Automate un flusso è rappresentato mediante un diagramma a blocchi come si può vedere in figura~\ref{fig:flowExample}. Ogni flusso inizia sempre con un blocco di tipo \textit{trigger}, il quale permette di avviare l'esecuzione del flusso in seguito al verificarsi di un evento specificato. La maggior parte dei connettori disponibili offre diversi trigger predefiniti da utilizzare per avviare i flussi. Tutti gli altri blocchi utilizzabili sono blocchi di tipo \textit{action} e permettono di eseguire operazioni come la creazione di record nel CRM, la chiamata ad API esterne, l'invio di email e molto altro, a seconda di ciò che viene reso disponibile dai vari connettori.
+In Microsoft Power Automate un flusso è rappresentato mediante un diagramma a blocchi come si può vedere in figura~\ref{fig:flowExample}. Ogni flusso inizia sempre con un blocco di tipo \textit{trigger}, il quale permette di avviare l'esecuzione del flusso in seguito al verificarsi di un evento specificato. La maggior parte dei connettori disponibili offre diversi trigger predefiniti da utilizzare per avviare i flussi. Tutti gli altri blocchi utilizzabili sono blocchi di tipo \textit{action} e permettono di eseguire operazioni come la creazione di record nel CRM, la chiamata ad API esterne, l'invio di email e altro, a seconda di ciò che viene reso disponibile dai vari connettori.
 
 Un connettore non è altro che un proxy o un wrapper intorno a un'API che consente al servizio sottostante di comunicare con Microsoft Power Automate. Consente agli utenti di connettere i loro account e sfruttare un set di trigger e azioni predefiniti per sviluppare i flussi di lavoro. Microsoft mette a disposizione numerosi connettori (gratuiti e a pagamento) già pronti per essere utilizzati ed è possibile inoltre per gli sviluppatori creare dei connettori custom per poter integrare il proprio servizio web o API nell'ecosistema Power Automate.
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=0.7\textwidth]{connectors.png}
+  \includegraphics[width=0.6\textwidth]{connectors.png}
   \caption{Elenco dei connettori gratuiti di Power Automate.}
   \label{fig:connectors}
 \end{figure}
 
 \subsubsection{Trigger e Action}
-Attraverso l'interfaccia grafica è possibile creare blocchi trigger e action e al si possono passare dati o espressioni in maniera molto semplice e intuitiva come in figura~\ref{fig:actionExample} dove si ha una action per la creazione di un file su dropbox a partire dai dati di un tweet restituiti da un trigger. Attraverso il pannello laterale \textit{Dynamic Content} si possono inserire i valori dinamici ritornati da action o trigger precedenti. È possibile inserire espressioni in linguaggio OData all'interno dei campi di testo oppure più complesse espressioni in linguaggio \textit{Workflow Definition Language} mediante il pannello laterale \textit{Expression}\cite{WorkflowDefinitioLanguage}.
+Attraverso l'interfaccia grafica è possibile creare blocchi trigger e action, ai quali si possono passare dati o espressioni in maniera molto semplice e intuitiva come in figura~\ref{fig:actionExample} nella quale è visibile una action per la creazione di un file su dropbox che utilizza i dati di un tweet restituiti da un trigger. Attraverso il pannello laterale \textit{Dynamic Content} si possono inserire i valori dinamici ritornati da action o trigger precedenti. È possibile inserire espressioni in linguaggio OData all'interno dei campi di testo oppure espressioni più complesse  in linguaggio \textit{Workflow Definition Language} mediante il pannello laterale \textit{Expression}\cite{WorkflowDefinitioLanguage}.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.9\textwidth]{action-example.png}
@@ -283,11 +283,11 @@ Dietro a questa carina e intuitiva interfaccia grafica non si nasconde altro che
 \lstinputlisting[language=json]{chapters/02/onedrive-action.json}
 
  \section{Microsoft AI Builder}
-Microsoft AI Builder è una funzionalità di Power Platform che permette l'utilizzo di modelli di intelligenza artificiale per ottimizzare i processi aziendali. Essendo parte di Power Automate, anche AI Builder sposa la filosofia low-code/no-code permettendo all'utente di utilizzare modelli di machine learning preconfezionati senza la necessità di competenze di programmazione o data science.
-Essendo una tecnologia completamente closed-source Microsoft non ha reso disponibili molte informazioni sull'architettura e il funzionamento dietro le quinte di AI Builder. L'unica infomazione disponibile è che viene sfruttata la stessa tecnologia del pacchetto di servizi Microsoft Azure AI, anch'essa closed-source.
+Microsoft AI Builder è una funzionalità di Power Platform che permette l'utilizzo di modelli di intelligenza artificiale per ottimizzare i processi aziendali. Essendo parte di Power Automate, anche AI Builder sposa la filosofia low-code/no-code permettendo all'utente di utilizzare modelli di machine learning preconfezionati senza la necessità di competenze di programmazione o \textit{data science}.
+Essendo una tecnologia completamente closed-source Microsoft non ha reso disponibili molte informazioni sull'architettura e il funzionamento dietro le quinte di AI Builder. L'unica informazione disponibile è che viene sfruttata la stessa tecnologia del pacchetto di servizi Microsoft Azure AI, anch'essa closed-source.
 
-In AI Builder è possibile scegliere tra diversi tipi di modelli a seconda dello scenario di utilizzo. I modelli disponibili si dividono in modelli predefiniti e modelli personalizzati.
-La differenza tra i due tipi sta nel fatto che nel primo caso il modello è fornito pronto all'uso, mentre nel secondo è necessario creare, sottoporre a training e pubblicare per l'uso il modello in questione.
+In AI Builder è possibile scegliere tra diversi tipi di modelli a seconda dello scenario di utilizzo. Questi si dividono in modelli predefiniti e modelli personalizzati.
+La differenza tra le due tipologie si trova nel fatto che nel primo caso il modello è fornito pronto all'uso, mentre nel secondo è necessario creare, sottoporre a training e pubblicare per l'uso il modello in questione.
 
 \begin{multicols}{2}
   Modelli predefiniti:
@@ -319,22 +319,22 @@ La differenza tra i due tipi sta nel fatto che nel primo caso il modello è forn
 \end{figure}
 
 \subsection{Creazione di un modello personalizzato}
-Nel caso di modelli personalizzati in fase di creazione di un modello è necessario fornire un dataset di training. Essendo una feature low-code/no-code i passaggi necessari sono abbastanza semplici. Per fornire il dataset di training si hanno due possibilità a seconda del tipo di dati che il modello in questione prende come input: testo o immagini/documenti. Se il modello effettua analisi di testo il dataset di training dovrà essere fornito utilizzando una tabella Dataverse, un altro servizio Microsoft che permete di archiviare e gestire dati utilizzati nelle applicazioni Microsoft. Questa tabella dovrà contenere i dati di training secondo le speciiche definite per il singolo modello. In altre parole modelli diversi richiedono dati diversi, etichettati in modo diverso. 
-Se il modello lavora su dati come documenti o immagini invece si dovrà seguire la procedura guidata all'interno di AI Buildere, che permetterà di caricare ed etichettare i documenti su cui fare il training. 
+Nel caso di modelli personalizzati in fase di creazione di un modello è necessario fornire un dataset di training. Essendo una feature low-code/no-code i passaggi necessari sono abbastanza semplici. Per fornire il dataset di training si hanno due possibilità a seconda del tipo di dati che il modello in questione prende come input: testo o immagini/documenti. Se il modello effettua analisi di testo il dataset di training dovrà essere fornito utilizzando una tabella Dataverse, un altro servizio Microsoft che permette di archiviare e gestire dati utilizzati nelle applicazioni Microsoft. Questa tabella dovrà contenere i dati di training secondo le specifiche definite per il singolo modello. In altre parole, modelli diversi richiedono dati diversi, etichettati in modo diverso. 
+Se il modello lavora su dati come documenti o immagini, invece, si dovrà seguire la procedura guidata all'interno di AI Builder, che permetterà di caricare ed etichettare i documenti su cui fare il training. 
 
-Una volta terminato il training del modello è possibile testarlo, con altri dati non etichettati e valutarne le performance. Dopodichè il modello è pronto per essere pubblicato ed utilizzato in Microsoft Power Automate. Esiste infatti un connettore apposito per AI Builder.
+Una volta terminato il training del modello è possibile testarlo, con altri dati non etichettati e valutarne le performance. Dopodiché il modello è pronto per essere pubblicato ed utilizzato in Microsoft Power Automate. Esiste infatti un connettore apposito per AI Builder.
 
 \subsubsection{Esempio: modello di elaborazione moduli}
-Il modello di elaborazione moduli fornito da AI Builder consente di leggere e salvare informazioni da documenti standard come fatture o documenti fiscali. Automatizzando questo processo è possibile risparmiare molto tempo evitando che l'utente debba passare ore a trascrivere a mano fatture all'interno di un gestionale ad esempio.
+Il modello di elaborazione moduli fornito da AI Builder consente di leggere e salvare informazioni da documenti standard come fatture o documenti fiscali. Automatizzando questo processo è possibile risparmiare molto tempo evitando, ad esempio, che l'utente debba passare ore a trascrivere a mano fatture all'interno di un gestionale.
 
-Il modello tuttavia, presenta ancora alcune limitazioni, come ad esempio il formato del file (PDF, JPG, PNG), il numero di pagine  e la dimensione del documento (non più di 500 pagine per i PDF e 50 MB), il supporto al solo alfabeto latino.
-Tra le limitazioni più importanti inoltre vi è il mancato supporto al riconoscimento di caselle di controllo, pulsanti di opzione, firme. Queste ultime tre limitazioni in particolare sono state un problema in fase di sviluppo dei progetti.
+Il modello, tuttavia, presenta ancora alcune limitazioni, come ad esempio il formato del file (PDF, JPG, PNG), il numero di pagine  e la dimensione del documento (non più di 500 pagine per i PDF e 50 MB) e il supporto al solo alfabeto latino.
+Tra le limitazioni più importanti, inoltre, vi è il mancato supporto al riconoscimento di caselle di controllo, pulsanti di opzione e firme. Queste ultime tre limitazioni in particolare sono state un problema in fase di sviluppo dei progetti.
 
-Per creare il modello personalizzato di elaborazione dei moduli è necessario per prima cosa specificare degli nomi dei campi e delle tabelle che dovranno essere estratti dal documento.
-In seguito si dovranno caricare i file su cui avverrà il training del modello, AI Builder a questo punto analizzerà i documenti caricati in modo da rilevare la presenza di campi testuali e tabelle.
-A questo punto l'utente dovrà manualmente selezionare i campi che si vogliono riconoscere e contrassegnarli con l'etichetta corrispondente come in figura~\ref{fig:aiBuilderFields}, allo stesso modo è possibile contrassegnare tabelle come in figura~\ref{fig:aiBuilderTables}. Non sono supportate le tabelle estese su più pagine, pertanto è necessario definirle come tabelle separate durante il primo passaggio della procedura.
+Per creare il modello personalizzato di elaborazione dei moduli è necessario per prima cosa specificare i nomi dei campi e delle tabelle che dovranno essere estratti dal documento.
+In seguito, si dovranno caricare i file su cui avverrà il training del modello. AI Builder a questo punto analizzerà i documenti caricati in modo da rilevare la presenza di campi testuali e tabelle.
+L'utente dovrà  selezionare manualmente i campi che si vogliono riconoscere e contrassegnarli con l'etichetta corrispondente come in figura~\ref{fig:aiBuilderFields}, allo stesso modo è possibile contrassegnare tabelle come in figura~\ref{fig:aiBuilderTables}. Non sono supportate le tabelle estese su più pagine, pertanto è necessario definirle come tabelle separate durante il primo passaggio della procedura.
 
-Terminato il passaggio di etichettatura di campi e tabelle sui documenti di training AI Builder procede con il training del modello.
+Terminato il passaggio di etichettatura di campi e tabelle sui documenti di training, AI Builder procede con il training del modello.
 
 \begin{figure}[ht!]
   \centering
@@ -350,8 +350,8 @@ Terminato il passaggio di etichettatura di campi e tabelle sui documenti di trai
   \label{fig:aiBuilderTables}
 \end{figure}
 
-Al termine del training è possibile effettuare un test rapido sulle performance del modello caricando manualmente un documento. In seguito all'analisi, verranno mostrati i campi e eventuali tabelle riconosciute e una percentuale di \textit{confidence} per ciascun campo. Questo dato indica quanto il modello ritiene di essere stato preciso nel riconoscimento di quel valore. In figura~\ref{fig:aiBuilderTest} un esempio.
-Dopodichè per utilizzare un modello all'interno di app e servizi Microsoft è necessario pubblicarlo mediante l'apposito pulsante.
+Al termine del training è possibile effettuare un test rapido sulle performance del modello caricando manualmente un documento. In seguito all'analisi, verranno mostrati i campi ed eventuali tabelle riconosciute e una percentuale di \textit{confidence} per ciascun campo. Questo dato indica quanto il modello ritiene di essere stato preciso nel riconoscimento di quel valore. In figura~\ref{fig:aiBuilderTest} un esempio.
+Dopodiché per utilizzare un modello all'interno di app e servizi Microsoft è necessario pubblicarlo mediante l'apposito pulsante.
 
 \begin{figure}[ht!]
   \centering
@@ -361,7 +361,7 @@ Dopodichè per utilizzare un modello all'interno di app e servizi Microsoft è n
 \end{figure}
 
 \subsubsection{Utilizzo in Power Automate}
-Per utilizzare un modello AI Builder in un flusso Power Automate è sufficiente utilizzare l'action corrispondente del connettore AI Builder al tipo modello necessario. Per utilizzare un modello di elaborazione dei moduli, ad esempio, bisogna utilizzare la action \textit{Process and save information from forms} e selezionare il modello pubblicato, il tipo di documento e passare il documento stesso come contenuto dinamico. Nell'esempio in figura il documento viene recuperato da un trigger manuale che richiede l'inserimento di un documento da parte dell'utente. Nulla vieta tuttavia che il documento da analizzare possa essere l'allegato di un'email oppure un file in Onedrive o Sharepoint. Sarà necessario semplicemente utilizzare una action del relativo connettore per recuperare il file desiderato.
+Per utilizzare un modello AI Builder in un flusso Power Automate è sufficiente utilizzare l'action  del connettore AI Builder corrispondente al tipo di modello necessario. Per utilizzare un modello di elaborazione dei moduli, ad esempio, bisogna utilizzare la action \textit{Process and save information from forms} e selezionare il modello pubblicato, il tipo di documento e passare il file stesso come contenuto dinamico. Nell'esempio in figura il documento viene recuperato da un trigger manuale che richiede l'inserimento di un file da parte dell'utente. Nulla vieta tuttavia che il documento da analizzare possa essere l'allegato di un'email oppure un file in Onedrive o Sharepoint. Sarà necessario semplicemente utilizzare una action del relativo connettore per recuperare il file desiderato.
 
 \begin{figure}[ht!]
   \centering
@@ -370,15 +370,13 @@ Per utilizzare un modello AI Builder in un flusso Power Automate è sufficiente 
   \label{fig:flowAIBuilder}
 \end{figure}
 
-Come output viene ritornato un oggetto JSON contente dati diversi a seconda del tipo di modello utilizzato. Nel caso di esempio per ogni campo vengono ritornati, il valore corrispondente, il punteggio di confidence, coordinate del riquadro che racchiude il valore, il numero di pagina in cui si trova il valore e altri dati. In appendice è disponibile un esempio di oggetto JSON restituito.
+Come output viene ritornato un oggetto JSON contenente dati diversi a seconda del tipo di modello utilizzato. Nel caso di esempio per ogni campo vengono ritornati, il valore corrispondente, il punteggio di confidence, le coordinate del riquadro che racchiude il valore, il numero di pagina in cui si trova il valore e altri dati. In appendice è disponibile un esempio di oggetto JSON restituito.
 I dati contenuti in questo oggetto inoltre vengono interpretati da Power Automate e resi disponibili come contenuto dinamico per essere utilizzati nel flusso da altre action.
 
 \subsubsection{Criticità di AI Builder}
-Nonostante AI Builder sia uno strumento molto potente per gli utilizzi per cui è proposto, risulta anche molto limitatante. Prendendo ad esempio il modello di elaborazione di documenti, che è quello con cui ho avuto più a che fare durante i due progetti, risulta perfettamente funzionante solo quando i documenti analizzati sono tra loro identici nella struttura. Le uniche differenze infatti devono trovarsi nei dati contenuti; nel momento in cui posizionamento, font e dimensione del testo variano, il modello fallisce. Microsoft però non menziona in nessun modo questo dettaglio nella documentazione.
+Nonostante AI Builder sia uno strumento molto potente per gli utilizzi per cui è proposto, risulta anche molto limitante. Prendendo ad esempio il modello di elaborazione di documenti, che è quello con cui ho avuto più a che fare durante i due progetti, si ottengono risultati positivi solo quando i documenti analizzati sono tra loro identici nella struttura a quelli utilizzati per il training. Le uniche differenze infatti devono trovarsi nei dati contenuti; qualora posizionamento, font e dimensione del testo differiscano, il modello fallisce. Microsoft tuttavia non menziona in nessun modo questo dettaglio nella documentazione.
 
-Inoltre avendo potuto lavorare con le varie tecniche di machine learning durante il corso \textit{Introduction to Machine Learning} mi sono trovato impossibilitato a utilizzare le metodologie apprese, in particolare riguardo la validazione e il testing, in quanto AI Builder non fornisce alcun modo per poter effettuare testing su larga scala e quindi raccogliere dati e analizzarli. In sostanza bisogna fidarsi dello strumento e credo che in ambito business non sia una buona pratica. 
-
-Chiaramente essendo un prodotto mirato a una classe di utenti non esperta credo il compromesso sia comunque buono.
+Inoltre, avendo potuto lavorare con le varie tecniche di machine learning durante il corso \textit{Introduction to Machine Learning}, mi sono trovato impossibilitato a utilizzare le metodologie apprese, in particolare riguardo la validazione e il testing, in quanto AI Builder non fornisce alcun modo per poter effettuare testing su larga scala e quindi raccogliere dati e analizzarli. In sostanza bisogna fidarsi dello strumento e credo che in ambito business non sia una buona pratica. Chiaramente essendo un prodotto mirato a una classe di utenti non esperta credo che il compromesso sia comunque buono.
 
 
 
