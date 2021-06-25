@@ -5,7 +5,7 @@ In questo capitolo viene effettuata un'analisi dettagliata delle tecnologie Micr
 
 \section{Microsoft Dynamics CRM}
 
-Microsoft Dynamics CRM\footnote{Devo davvero ringraziare Tutorialspoint perché la sua guida, su cui mi sono basato per l'elaborazione di questa sezione, mi ha chiarito moltissimi dubbi che la documentazione ufficiale (estremamente confusionaria) e i colleghi in azienda non sono riusciti a risolvermi.} è un pacchetto software per la gestione delle relazioni con il cliente sviluppato da Microsoft. Di base si concentra principalmente sui settori Vendite, Marketing e Servizio Clienti, anche se è interamente customizzabile grazie al framework proprietario Microsoft XRM SDK  basato su .NET.
+Microsoft Dynamics CRM\footnote{Devo davvero ringraziare Tutorialspoint perché la sua guida~\cite{DynamicsTutorialspoint}, su cui mi sono basato per l'elaborazione di questa sezione, mi ha chiarito moltissimi dubbi che la documentazione ufficiale (estremamente confusionaria) e i colleghi in azienda non sono riusciti a risolvermi.} è un pacchetto software per la gestione delle relazioni con il cliente sviluppato da Microsoft. Di base si concentra principalmente sui settori Vendite, Marketing e Servizio Clienti, anche se è interamente customizzabile grazie al framework proprietario Microsoft XRM SDK  basato su .NET.
 
 Il CRM può essere utilizzato per aumentare la produttività delle vendite e l'efficacia del marketing per un'organizzazione, gestire l'intera catena di assistenza clienti e fornire informazioni sui social, business intelligence e molte altre funzionalità e caratteristiche pronte all'uso.
 L'interazione utente con Microsoft Dynamics CRM avviene attraverso l'interfaccia web, la quale è ottimizzata anche per l'utilizzo mobile e tablet oltre che desktop.
@@ -175,7 +175,7 @@ La pipeline di un plugin è divisa in molteplici fasi su cui può essere registr
   \label{fig:pluginPipeline}
 \end{figure}
 
-\begin{table}[ht]
+\begin{table}[ht!]
   \centering
   \begin{tabular}{p{0.15\textwidth}lp{0.55\textwidth}}
     \toprule
@@ -214,7 +214,7 @@ Tuttavia la documentazione ufficiale Microsoft~\cite{PluginVSWorkflow} suggerisc
     \midrule
     Impatto sulle perfomance del CRM & Plugin sincroni possono aumentare i tempi di risposta del CRM in quanto fanno parte dei processi della piattaforma. Un plugin mal implementato può bloccare il CRM & L'impatto negativo sui tempi di risposta del CRM è minimo. \\
     \midrule
-    Restrizioni di sicurezza & Per registrare un plugin è necessario un utente con i privilegi di System Admin o System Customizer che sia membro del Deployment Administrator group & Gli utenti posson creare workflow in modo interattivo all-interno dell'interfaccia web. Tuttavia per poter registrare un workflow è necessario avere gli stessi privilegi di sicurezza richiesti per i plugin. \\
+    Restrizioni di sicurezza & Per registrare un plugin è necessario un utente con i privilegi di System Admin o System Customizer che sia membro del Deployment Administrator group & Gli utenti posson creare workflow in modo interattivo all'interno dell'interfaccia web. Tuttavia per poter registrare un workflow è necessario avere gli stessi privilegi di sicurezza richiesti per i plugin. \\
     \midrule
     Migliore per operazioni che richiedono molto o poco tempo & I plugin ad esecuzione sincrona andrebbero usati per processi brevi mentre i plugin asincroni per operazioni più intensive. & Indifferentemente per processi brevi o lunghi. \\
     \midrule
@@ -236,4 +236,152 @@ Una soluzione Managed è una soluzione che si intende distribuire e installare n
 
 Una soluzione unmanaged è una soluzione da considerarsi ancora in fase di sviluppo e che non si intende distribuire. In una soluzione unmanaged è possibile aggiungere, rimuovere, modificare e eliminare componenti. Ogni nuova soluzione inoltre è di default impostata di tipo unmanaged.
 
-\section{Microsoft Power Platform}
+\section{Microsoft Power Automate}
+Microsoft Power Automate, in precedenza conosciuto come Microsoft Flow, è un servizio online per la creazione di flussi di lavoro \textit{low-code/no-code} in grado di automatizzare operazioni su diverse app e servizi, sia sviluppati da Microsoft che non.
+È possibile connettersi infatti a più di 220 servizi e gestire i dati sia in cloud che in locale come ad esempio con SharePoint o Microsoft SQL Server. La lista di connettori ad app e servizi disponibili, inoltre è in continua crescita, in quanto Microsoft lavora a stretto contatto con i vari partner per estendere le possibilità di Power Automate.
+
+I due principali tipi di flussi di lavoro supportati da Power Automate sono i flussi cloud e i flussi desktop.
+\paragraph{Flussi Cloud} Si dividono in tre tipologie:
+\begin{itemize}
+  \item Flussi automatizzati - Permettono di creare un'automazione che viene attivata da un evento come l'arrivo di un email da una persona specifica. 
+  \item Flussi istantanei - Permettono di avviare un automazione facendo click su un pulsante. È possibil automatizzare le azioni ripetitive come ad esempio l'invio di un promemoria su Microsoft Teams
+  \item Flussi pianificati - Permettono di pianificare un'automazione a una specifica ora come ad esempio il caricamento giornaliero di dati in SharePoint o in un database
+\end{itemize}
+
+\paragraph{Flussi Desktop} Vengono utilizzati per automatizzare attività ripetitive sul Web o sul desktop. È possibile ad esempio creare flussi per organizzare documenti mendiante azioni su file e cartelle, estrarre dati da siti web e archiviarli su file Excel, inserire fatture in software gestionali e molto altro.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.9\textwidth]{flow-example.png}
+  \caption{Esempio di un flusso Power Automate}
+  \label{fig:flowExample}
+\end{figure}
+
+\subsection{Flussi Cloud}
+In Microsoft Power Automate un flusso è rappresentato mediante un diagramma a blocchi come si può vedere in figura~\ref{fig:flowExample}. Ogni flusso inizia sempre con un blocco di tipo \textit{trigger}, il quale permette di avviare l'esecuzione del flusso in seguito al verificarsi di un evento specificato. La maggior parte dei connettori disponibili offre diversi trigger predefiniti da utilizzare per avviare i flussi. Tutti gli altri blocchi utilizzabili sono blocchi di tipo \textit{action} e permettono di eseguire operazioni come la creazione di record nel CRM, la chiamata ad API esterne, l'invio di email e molto altro, a seconda di ciò che viene reso disponibile dai vari connettori.
+
+Un connettore non è altro che un proxy o un wrapper intorno a un'API che consente al servizio sottostante di comunicare con Microsoft Power Automate. Consente agli utenti di connettere i loro account e sfruttare un set di trigger e azioni predefiniti per sviluppare i flussi di lavoro. Microsoft mette a disposizione numerosi connettori (gratuiti e a pagamento) già pronti per essere utilizzati ed è possibile inoltre per gli sviluppatori creare dei connettori custom per poter integrare il proprio servizio web o API nell'ecosistema Power Automate.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{connectors.png}
+  \caption{Elenco dei connettori gratuiti di Power Automate.}
+  \label{fig:connectors}
+\end{figure}
+
+\subsubsection{Trigger e Action}
+Attraverso l'interfaccia grafica è possibile creare blocchi trigger e action e al si possono passare dati o espressioni in maniera molto semplice e intuitiva come in figura~\ref{fig:actionExample} dove si ha una action per la creazione di un file su dropbox a partire dai dati di un tweet restituiti da un trigger. Attraverso il pannello laterale \textit{Dynamic Content} si possono inserire i valori dinamici ritornati da action o trigger precedenti. È possibile inserire espressioni in linguaggio OData all'interno dei campi di testo oppure più complesse espressioni in linguaggio \textit{Workflow Definition Language} mediante il pannello laterale \textit{Expression}\cite{WorkflowDefinitioLanguage}.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.9\textwidth]{action-example.png}
+  \caption{Esempio di blocco di tipo action.}
+  \label{fig:actionExample}
+\end{figure}
+
+Dietro a questa carina e intuitiva interfaccia grafica non si nasconde altro che un oggetto JSON definito rispettando le specifiche del linguaggio sopracitato. Di seguito il listato corrispondente all'action usata come esempio.
+
+\lstinputlisting[language=json]{chapters/02/onedrive-action.json}
+
+ \section{Microsoft AI Builder}
+Microsoft AI Builder è una funzionalità di Power Platform che permette l'utilizzo di modelli di intelligenza artificiale per ottimizzare i processi aziendali. Essendo parte di Power Automate, anche AI Builder sposa la filosofia low-code/no-code permettendo all'utente di utilizzare modelli di machine learning preconfezionati senza la necessità di competenze di programmazione o data science.
+Essendo una tecnologia completamente closed-source Microsoft non ha reso disponibili molte informazioni sull'architettura e il funzionamento dietro le quinte di AI Builder. L'unica infomazione disponibile è che viene sfruttata la stessa tecnologia del pacchetto di servizi Microsoft Azure AI, anch'essa closed-source.
+
+In AI Builder è possibile scegliere tra diversi tipi di modelli a seconda dello scenario di utilizzo. I modelli disponibili si dividono in modelli predefiniti e modelli personalizzati.
+La differenza tra i due tipi sta nel fatto che nel primo caso il modello è fornito pronto all'uso, mentre nel secondo è necessario creare, sottoporre a training e pubblicare per l'uso il modello in questione.
+
+\begin{multicols}{2}
+  Modelli predefiniti:
+    \begin{itemize}
+      \item Estrazione di parole chiave
+      \item Rilevamento lingua
+      \item Analisi del sentimento
+      \item Traduzione testo
+      \item Lettore di biglietti da visita
+      \item Riconoscimento del testo
+      \item Elaborazione ricevute
+    \end{itemize}
+\columnbreak
+  Modelli personalizzati:
+    \begin{itemize}
+      \item Classificazione categoria
+      \item Estrazione di entità
+      \item Stima
+      \item Elaborazione moduli
+      \item Rilevamento oggetti
+    \end{itemize}
+\end{multicols}
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.9\textwidth]{ai-builder-home.png}
+  \caption{Schermata home di AI Builder.}
+  \label{fig:aiBuilderHome}
+\end{figure}
+
+\subsection{Creazione di un modello personalizzato}
+Nel caso di modelli personalizzati in fase di creazione di un modello è necessario fornire un dataset di training. Essendo una feature low-code/no-code i passaggi necessari sono abbastanza semplici. Per fornire il dataset di training si hanno due possibilità a seconda del tipo di dati che il modello in questione prende come input: testo o immagini/documenti. Se il modello effettua analisi di testo il dataset di training dovrà essere fornito utilizzando una tabella Dataverse, un altro servizio Microsoft che permete di archiviare e gestire dati utilizzati nelle applicazioni Microsoft. Questa tabella dovrà contenere i dati di training secondo le speciiche definite per il singolo modello. In altre parole modelli diversi richiedono dati diversi, etichettati in modo diverso. 
+Se il modello lavora su dati come documenti o immagini invece si dovrà seguire la procedura guidata all'interno di AI Buildere, che permetterà di caricare ed etichettare i documenti su cui fare il training. 
+
+Una volta terminato il training del modello è possibile testarlo, con altri dati non etichettati e valutarne le performance. Dopodichè il modello è pronto per essere pubblicato ed utilizzato in Microsoft Power Automate. Esiste infatti un connettore apposito per AI Builder.
+
+\subsubsection{Esempio: modello di elaborazione moduli}
+Il modello di elaborazione moduli fornito da AI Builder consente di leggere e salvare informazioni da documenti standard come fatture o documenti fiscali. Automatizzando questo processo è possibile risparmiare molto tempo evitando che l'utente debba passare ore a trascrivere a mano fatture all'interno di un gestionale ad esempio.
+
+Il modello tuttavia, presenta ancora alcune limitazioni, come ad esempio il formato del file (PDF, JPG, PNG), il numero di pagine  e la dimensione del documento (non più di 500 pagine per i PDF e 50 MB), il supporto al solo alfabeto latino.
+Tra le limitazioni più importanti inoltre vi è il mancato supporto al riconoscimento di caselle di controllo, pulsanti di opzione, firme. Queste ultime tre limitazioni in particolare sono state un problema in fase di sviluppo dei progetti.
+
+Per creare il modello personalizzato di elaborazione dei moduli è necessario per prima cosa specificare degli nomi dei campi e delle tabelle che dovranno essere estratti dal documento.
+In seguito si dovranno caricare i file su cui avverrà il training del modello, AI Builder a questo punto analizzerà i documenti caricati in modo da rilevare la presenza di campi testuali e tabelle.
+A questo punto l'utente dovrà manualmente selezionare i campi che si vogliono riconoscere e contrassegnarli con l'etichetta corrispondente come in figura~\ref{fig:aiBuilderFields}, allo stesso modo è possibile contrassegnare tabelle come in figura~\ref{fig:aiBuilderTables}. Non sono supportate le tabelle estese su più pagine, pertanto è necessario definirle come tabelle separate durante il primo passaggio della procedura.
+
+Terminato il passaggio di etichettatura di campi e tabelle sui documenti di training AI Builder procede con il training del modello.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.9\textwidth]{ai-builder-fields.png}
+  \caption{Etichettatura di campi testuali in AI Builder.}
+  \label{fig:aiBuilderFields}
+\end{figure}
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.9\textwidth]{ai-builder-tables.png}
+  \caption{Etichettatura di tabelle in AI Builder.}
+  \label{fig:aiBuilderTables}
+\end{figure}
+
+Al termine del training è possibile effettuare un test rapido sulle performance del modello caricando manualmente un documento. In seguito all'analisi, verranno mostrati i campi e eventuali tabelle riconosciute e una percentuale di \textit{confidence} per ciascun campo. Questo dato indica quanto il modello ritiene di essere stato preciso nel riconoscimento di quel valore. In figura~\ref{fig:aiBuilderTest} un esempio.
+Dopodichè per utilizzare un modello all'interno di app e servizi Microsoft è necessario pubblicarlo mediante l'apposito pulsante.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{ai-builder-test.png}
+  \caption{Esempio dell'esito del test rapido su un documento.}
+  \label{fig:aiBuilderTest}
+\end{figure}
+
+\subsubsection{Utilizzo in Power Automate}
+Per utilizzare un modello AI Builder in un flusso Power Automate è sufficiente utilizzare l'action corrispondente del connettore AI Builder al tipo modello necessario. Per utilizzare un modello di elaborazione dei moduli, ad esempio, bisogna utilizzare la action \textit{Process and save information from forms} e selezionare il modello pubblicato, il tipo di documento e passare il documento stesso come contenuto dinamico. Nell'esempio in figura il documento viene recuperato da un trigger manuale che richiede l'inserimento di un documento da parte dell'utente. Nulla vieta tuttavia che il documento da analizzare possa essere l'allegato di un'email oppure un file in Onedrive o Sharepoint. Sarà necessario semplicemente utilizzare una action del relativo connettore per recuperare il file desiderato.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{flow-ai-builder.png}
+  \caption{Esempio di utilizzo di una action AI Builder in un flusso Power Automate.}
+  \label{fig:flowAIBuilder}
+\end{figure}
+
+Come output viene ritornato un oggetto JSON contente dati diversi a seconda del tipo di modello utilizzato. Nel caso di esempio per ogni campo vengono ritornati, il valore corrispondente, il punteggio di confidence, coordinate del riquadro che racchiude il valore, il numero di pagina in cui si trova il valore e altri dati. In appendice è disponibile un esempio di oggetto JSON restituito.
+I dati contenuti in questo oggetto inoltre vengono interpretati da Power Automate e resi disponibili come contenuto dinamico per essere utilizzati nel flusso da altre action.
+
+\subsubsection{Criticità di AI Builder}
+Nonostante AI Builder sia uno strumento molto potente per gli utilizzi per cui è proposto, risulta anche molto limitatante. Prendendo ad esempio il modello di elaborazione di documenti, che è quello con cui ho avuto più a che fare durante i due progetti, risulta perfettamente funzionante solo quando i documenti analizzati sono tra loro identici nella struttura. Le uniche differenze infatti devono trovarsi nei dati contenuti; nel momento in cui posizionamento, font e dimensione del testo variano, il modello fallisce. Microsoft però non menziona in nessun modo questo dettaglio nella documentazione.
+
+Inoltre avendo potuto lavorare con le varie tecniche di machine learning durante il corso \textit{Introduction to Machine Learning} mi sono trovato impossibilitato a utilizzare le metodologie apprese, in particolare riguardo la validazione e il testing, in quanto AI Builder non fornisce alcun modo per poter effettuare testing su larga scala e quindi raccogliere dati e analizzarli. In sostanza bisogna fidarsi dello strumento e credo che in ambito business non sia una buona pratica. 
+
+Chiaramente essendo un prodotto mirato a una classe di utenti non esperta credo il compromesso sia comunque buono.
+
+
+
+
+
+

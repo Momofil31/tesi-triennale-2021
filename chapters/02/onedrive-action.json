@@ -1,0 +1,20 @@
+{
+  "inputs": {
+    "host": {
+      "connectionName": "shared_onedriveforbusiness",
+      "operationId": "CreateFile",
+      "apiId": "/providers/Microsoft.PowerApps/apis/shared_onedriveforbusiness"
+    },
+    "parameters": {
+      "folderPath": "/sdks",
+      "name": "@{triggerOutputs()?['body/TweetId']}.txt",
+      "body": "Tweeted by: @{triggerOutputs()?['body/TweetedBy']}\nNumber of retweets: @{triggerOutputs()?['body/RetweetCount']}\nTweet text: @{triggerOutputs()?['body/TweetText']}"
+    },
+    "authentication": "@parameters('$authentication')"
+  },
+  "runtimeConfiguration": {
+    "contentTransfer": {
+      "transferMode": "Chunked"
+    }
+  }
+}

@@ -1,0 +1,720 @@
+{
+  "@odata.context": "https://replyforutilities.crm4.dynamics.com/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.PredictResponse",
+  "responsev2": {
+    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+    "operationStatus": "Success",
+    "predictionOutput": {
+      "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+      "pageCount": 1,
+      "layoutName": "Adatum",
+      "layoutConfidenceScore": 0.964,
+      "readResults@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+      "readResults": [],
+      "tables": {
+        "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+        "Items": {
+          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+          "displayName": "Items",
+          "entries@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+          "entries": [
+            {
+              "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+              "Line_002ab8055a39c0312b2ebd69806b8c27b87": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "value": "$32.99",
+                "location": {
+                  "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                  "pageNumber": 1,
+                  "boundingBox": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "left": 0.7617647058823529,
+                    "top": 0.5372727272727272,
+                    "width": 0.055882352941176494,
+                    "height": 0.012272727272727324,
+                    "polygon": {
+                      "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                      "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                      "coordinates": [
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.7617647058823529,
+                          "y": 0.5372727272727272
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.8176470588235294,
+                          "y": 0.5372727272727272
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.8176470588235294,
+                          "y": 0.5495454545454546
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.7617647058823529,
+                          "y": 0.5495454545454546
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "Quantity": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "value": "01",
+                "location": {
+                  "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                  "pageNumber": 1,
+                  "boundingBox": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "left": 0.08,
+                    "top": 0.5381818181818182,
+                    "width": 0.01705882352941175,
+                    "height": 0.010454545454545494,
+                    "polygon": {
+                      "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                      "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                      "coordinates": [
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.08,
+                          "y": 0.5381818181818182
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.09705882352941175,
+                          "y": 0.5381818181818182
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.09705882352941175,
+                          "y": 0.5486363636363637
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.08,
+                          "y": 0.5486363636363637
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "Description": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "value": "Safe pool alarm",
+                "location": {
+                  "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                  "pageNumber": 1,
+                  "boundingBox": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "left": 0.2776470588235294,
+                    "top": 0.5381818181818182,
+                    "width": 0.12823529411764706,
+                    "height": 0.013181818181818183,
+                    "polygon": {
+                      "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                      "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                      "coordinates": [
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.2776470588235294,
+                          "y": 0.5381818181818182
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.40588235294117647,
+                          "y": 0.5381818181818182
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.40588235294117647,
+                          "y": 0.5513636363636364
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.2776470588235294,
+                          "y": 0.5513636363636364
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "Unit_002e5018fc9450544ffc2f82e17655cf519": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "value": "$32.99",
+                "location": {
+                  "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                  "pageNumber": 1,
+                  "boundingBox": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "left": 0.5735294117647058,
+                    "top": 0.5372727272727272,
+                    "width": 0.05529411764705883,
+                    "height": 0.012272727272727324,
+                    "polygon": {
+                      "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                      "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                      "coordinates": [
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.5735294117647058,
+                          "y": 0.5372727272727272
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.6288235294117647,
+                          "y": 0.5372727272727272
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.6288235294117647,
+                          "y": 0.5495454545454546
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.5735294117647058,
+                          "y": 0.5495454545454546
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+              "Line_002ab8055a39c0312b2ebd69806b8c27b87": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "value": "$260.91",
+                "location": {
+                  "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                  "pageNumber": 1,
+                  "boundingBox": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "left": 0.7617647058823529,
+                    "top": 0.5681818181818182,
+                    "width": 0.06294117647058828,
+                    "height": 0.012272727272727213,
+                    "polygon": {
+                      "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                      "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                      "coordinates": [
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.7617647058823529,
+                          "y": 0.5681818181818182
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.8247058823529412,
+                          "y": 0.5681818181818182
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.8247058823529412,
+                          "y": 0.5804545454545454
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.7617647058823529,
+                          "y": 0.5804545454545454
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "Quantity": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "value": "09",
+                "location": {
+                  "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                  "pageNumber": 1,
+                  "boundingBox": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "left": 0.08,
+                    "top": 0.5690909090909091,
+                    "width": 0.01941176470588235,
+                    "height": 0.010454545454545494,
+                    "polygon": {
+                      "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                      "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                      "coordinates": [
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.08,
+                          "y": 0.5690909090909091
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.09941176470588235,
+                          "y": 0.5690909090909091
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.09941176470588235,
+                          "y": 0.5795454545454546
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.08,
+                          "y": 0.5795454545454546
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "Description": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "value": "Filter cartridge",
+                "location": {
+                  "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                  "pageNumber": 1,
+                  "boundingBox": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "left": 0.2782352941176471,
+                    "top": 0.5690909090909091,
+                    "width": 0.11823529411764705,
+                    "height": 0.013181818181818183,
+                    "polygon": {
+                      "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                      "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                      "coordinates": [
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.2782352941176471,
+                          "y": 0.5690909090909091
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.39647058823529413,
+                          "y": 0.5690909090909091
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.39647058823529413,
+                          "y": 0.5822727272727273
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.2782352941176471,
+                          "y": 0.5822727272727273
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "Unit_002e5018fc9450544ffc2f82e17655cf519": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "value": "$28.99",
+                "location": {
+                  "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                  "pageNumber": 1,
+                  "boundingBox": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "left": 0.5735294117647058,
+                    "top": 0.5681818181818182,
+                    "width": 0.05529411764705883,
+                    "height": 0.012272727272727213,
+                    "polygon": {
+                      "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                      "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                      "coordinates": [
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.5735294117647058,
+                          "y": 0.5681818181818182
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.6288235294117647,
+                          "y": 0.5681818181818182
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.6288235294117647,
+                          "y": 0.5804545454545454
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.5735294117647058,
+                          "y": 0.5804545454545454
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+              "Line_002ab8055a39c0312b2ebd69806b8c27b87": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "value": "$154.99",
+                "location": {
+                  "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                  "pageNumber": 1,
+                  "boundingBox": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "left": 0.7617647058823529,
+                    "top": 0.5990909090909091,
+                    "width": 0.0658823529411765,
+                    "height": 0.012272727272727213,
+                    "polygon": {
+                      "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                      "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                      "coordinates": [
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.7617647058823529,
+                          "y": 0.5990909090909091
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.8276470588235294,
+                          "y": 0.5990909090909091
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.8276470588235294,
+                          "y": 0.6113636363636363
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.7617647058823529,
+                          "y": 0.6113636363636363
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "Quantity": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "value": "01",
+                "location": {
+                  "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                  "pageNumber": 1,
+                  "boundingBox": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "left": 0.08,
+                    "top": 0.6,
+                    "width": 0.01705882352941175,
+                    "height": 0.010454545454545494,
+                    "polygon": {
+                      "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                      "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                      "coordinates": [
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.08,
+                          "y": 0.6
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.09705882352941175,
+                          "y": 0.6
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.09705882352941175,
+                          "y": 0.6104545454545455
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.08,
+                          "y": 0.6104545454545455
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "Description": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "value": "Pool pump",
+                "location": {
+                  "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                  "pageNumber": 1,
+                  "boundingBox": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "left": 0.2782352941176471,
+                    "top": 0.6,
+                    "width": 0.08647058823529413,
+                    "height": 0.013181818181818183,
+                    "polygon": {
+                      "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                      "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                      "coordinates": [
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.2782352941176471,
+                          "y": 0.6
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.3647058823529412,
+                          "y": 0.6
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.3647058823529412,
+                          "y": 0.6131818181818182
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.2782352941176471,
+                          "y": 0.6131818181818182
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "Unit_002e5018fc9450544ffc2f82e17655cf519": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "value": "$154.99",
+                "location": {
+                  "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                  "pageNumber": 1,
+                  "boundingBox": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "left": 0.5735294117647058,
+                    "top": 0.5990909090909091,
+                    "width": 0.06529411764705884,
+                    "height": 0.012272727272727213,
+                    "polygon": {
+                      "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                      "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                      "coordinates": [
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.5735294117647058,
+                          "y": 0.5990909090909091
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.6388235294117647,
+                          "y": 0.5990909090909091
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.6388235294117647,
+                          "y": 0.6113636363636363
+                        },
+                        {
+                          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                          "x": 0.5735294117647058,
+                          "y": 0.6113636363636363
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "columns@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+          "columns": [
+            {
+              "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+              "name": "Quantity"
+            },
+            {
+              "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+              "name": "Description"
+            },
+            {
+              "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+              "name": "Unit price"
+            },
+            {
+              "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+              "name": "Line total"
+            }
+          ]
+        }
+      },
+      "labels": {
+        "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+        "Total_0098ada642839a03b55e11ffdcd9a8ddca": {
+          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+          "displayName": "Total amount",
+          "value": "$457.87",
+          "confidence": 0.99,
+          "valueLocation": {
+            "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+            "pageNumber": 1,
+            "boundingBox": {
+              "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+              "left": 0.13588235294117648,
+              "top": 0.8663636363636363,
+              "width": 0.07999999999999999,
+              "height": 0.015454545454545388,
+              "polygon": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                "coordinates": [
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.13588235294117648,
+                    "y": 0.8663636363636363
+                  },
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.21588235294117647,
+                    "y": 0.8663636363636363
+                  },
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.21588235294117647,
+                    "y": 0.8818181818181817
+                  },
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.13588235294117648,
+                    "y": 0.8818181818181817
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "Invoice_85149f36226f35d3c565e5f0daa1f797": {
+          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+          "displayName": "Invoice number",
+          "value": "1975",
+          "confidence": 0.995,
+          "valueLocation": {
+            "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+            "pageNumber": 1,
+            "boundingBox": {
+              "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+              "left": 0.36705882352941177,
+              "top": 0.15863636363636366,
+              "width": 0.05470588235294116,
+              "height": 0.014999999999999958,
+              "polygon": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                "coordinates": [
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.36705882352941177,
+                    "y": 0.15863636363636366
+                  },
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.42176470588235293,
+                    "y": 0.15863636363636366
+                  },
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.42176470588235293,
+                    "y": 0.17363636363636362
+                  },
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.36705882352941177,
+                    "y": 0.17363636363636362
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "Due_0020e1cb6d30fa3f17ee1e50b2bcf1967374": {
+          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+          "displayName": "Due date",
+          "value": "Nov 12, 2020",
+          "confidence": 0.993,
+          "valueLocation": {
+            "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+            "pageNumber": 1,
+            "boundingBox": {
+              "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+              "left": 0.07764705882352942,
+              "top": 0.15863636363636366,
+              "width": 0.1511764705882353,
+              "height": 0.017272727272727245,
+              "polygon": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                "coordinates": [
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.07764705882352942,
+                    "y": 0.15863636363636366
+                  },
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.2288235294117647,
+                    "y": 0.15863636363636366
+                  },
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.2288235294117647,
+                    "y": 0.1759090909090909
+                  },
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.07764705882352942,
+                    "y": 0.1759090909090909
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "Customer62566c648cebabc3d75a987bb13e3bd7": {
+          "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+          "displayName": "Customer ID",
+          "value": "5791",
+          "confidence": 0.994,
+          "valueLocation": {
+            "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+            "pageNumber": 1,
+            "boundingBox": {
+              "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+              "left": 0.19294117647058823,
+              "top": 0.35318181818181815,
+              "width": 0.0388235294117647,
+              "height": 0.011363636363636354,
+              "polygon": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "coordinates@odata.type": "#Collection(Microsoft.Dynamics.CRM.crmbaseentity)",
+                "coordinates": [
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.19294117647058823,
+                    "y": 0.35318181818181815
+                  },
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.23176470588235293,
+                    "y": 0.35318181818181815
+                  },
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.23176470588235293,
+                    "y": 0.3645454545454545
+                  },
+                  {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "x": 0.19294117647058823,
+                    "y": 0.3645454545454545
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
