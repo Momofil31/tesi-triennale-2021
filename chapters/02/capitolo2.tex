@@ -85,7 +85,7 @@ I form possono essere creati attraverso un'interfaccia apposita presente nelle i
 \subsection{Ricerca e Ricerca Avanzata}
 Una delle più importanti funzionalità predefinite di Microsoft Dynamics CRM si trova nelle sue capacità di ricerca, le quali forniscono la possibilità di costruire \textit{query} e filtri molto avanzati senza la necessità da parte dell'utente di conoscere linguaggi di programmazione o di querying.
 
-Di default la vista a griglia di ogni entità supporta una funzionalità di Ricerca Veloce mediante una barra di ricerca posizionata nell'interfaccia utente in alto a destra come si può osservare in figura~\ref{fig:quickSearch}.
+Di default la vista a griglia di ogni entità supporta una funzionalità di Ricerca Veloce mediante una barra di ricerca posizionata nell'interfaccia utente in alto a destra come si può osservare in Figura~\ref{fig:quickSearch}.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.7\textwidth]{quick-search.png}
@@ -93,7 +93,7 @@ Di default la vista a griglia di ogni entità supporta una funzionalità di Rice
   \label{fig:quickSearch}
 \end{figure}
 
-Cliccando invece sull'icona cerchiata in rosso in figura~\ref{fig:quickSearch} si accede alla ricerca avanzata, disponibile in una nuova finestra. La ricerca avanzata del CRM è una delle funzionalità più utili e potenti disponibili di default. In questa finestra, come si vede in figura~\ref{fig:advancedSearch}, è possibile selezionare l'entità di cui di vogliono cercare i record, applicare filtri e criteri di raggruppamento e salvare i risultati come viste (\textit{views}) personali.
+Cliccando invece sull'icona cerchiata in rosso in Figura~\ref{fig:quickSearch} si accede alla ricerca avanzata, disponibile in una nuova finestra. La ricerca avanzata del CRM è una delle funzionalità più utili e potenti disponibili di default. In questa finestra, come si vede in Figura~\ref{fig:advancedSearch}, è possibile selezionare l'entità di cui di vogliono cercare i record, applicare filtri e criteri di raggruppamento e salvare i risultati come viste (\textit{views}) personali.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.7\textwidth]{advanced-search.png}
@@ -117,7 +117,7 @@ Per capire quando può essere necessario l'utilizzo delle Web Resources del CRM 
   \item Si vuole richiamare l'esecuzione di servizi web esterni in seguito ad azioni lato client, senza dover scomodare l'utilizzo di plugin o workflow lato server.
 \end{itemize}
 
-L'accesso a una Web Resource può avvenire mediante il suo URL univoco. Dato che le Web Resource vengono salvate nel database del CRM, possono essere caricate come singolo file o come collezione eterogenea di file (HTML, Javascript, ecc.) oppure possono essere create e/o modificate direttamente dal CRM, mediante un pannello apposito. Questo consente inoltre di semplificare i passaggi in caso di migrazione da un ambiente a un altro, come per qualsiasi altra personalizzazione del CRM. In tabella~\ref{table:webResourceType} vi è un elenco dei principali tipi di web resource supportati.
+L'accesso a una Web Resource può avvenire mediante il suo URL univoco. Dato che le Web Resource vengono salvate nel database del CRM, possono essere caricate come singolo file o come collezione eterogenea di file (HTML, Javascript, ecc.) oppure possono essere create e/o modificate direttamente dal CRM, mediante un pannello apposito. Questo consente inoltre di semplificare i passaggi in caso di migrazione da un ambiente a un altro, come per qualsiasi altra personalizzazione del CRM. In Tabella~\ref{table:webResourceType} vi è un elenco dei principali tipi di web resource supportati.
 
 \begin{table}[ht]
   \centering
@@ -151,7 +151,7 @@ L'esecuzione di un workflow può essere avviata automaticamente, in base a speci
 
 I workflow del CRM possono essere eseguiti in maniera sincrona o asincrona. In genere, si utilizza l'approccio asincrono, facendo eseguire il workflow in background in quanto in questo modo si può limitare l'utilizzo di risorse del sistema.
 
-L'esecuzione di un workflow può avvenire in seguito a specifici eventi definiti dal \textit{Message} del workflow (ovvero il tipo di evento sul quale un Workflow può essere registrato) i quali possono essere creazione, modifica di uno o più valori o eliminazione di un record. Un workflow può inoltre, avere uno \textit{scope} (in italiano "ambito di lavoro") che può essere User, Business Unit, Parent Child Business Unit o Organization. È possibile quindi specificare su quali record potrà essere eseguito il workflow in base all'utente proprietario dei record e del workflow.
+L'esecuzione di un workflow può avvenire in seguito a specifici eventi definiti dal \textit{Message} del workflow (ovvero il tipo di evento sul quale un Workflow può essere registrato) i quali possono essere creazione, modifica di uno o più valori o eliminazione di un record. Inoltre, un workflow può avere uno \textit{scope} (in italiano "ambito di lavoro") che può essere User, Business Unit, Parent Child Business Unit o Organization. È possibile quindi specificare su quali record potrà essere eseguito il workflow in base all'utente proprietario dei record e del workflow.
 
 Un workflow dunque non è altro che una sequenza di passaggi che vengono eseguiti sul CRM. Possono essere condizionali, di attesa o azioni. I primi due tipi sono auto esplicativi mentre nel terzo si può avere ad esempio la creazione o l'aggiornamento di un record, l'assegnamento di un record a un utente, l'invio di un'email, l'esecuzione di uno step custom programmato in .NET da uno sviluppatore oppure l'interruzione dell'esecuzione del workflow.
 
@@ -166,7 +166,7 @@ Alcuni esempi di scenari in cui un Plugin può essere utilizzato sono:
   \item Si vuole automatizzare dei processi come l'invio di email in seguito a specifici eventi nel CRM.
 \end{itemize}
 
-La pipeline di un plugin è divisa in molteplici fasi su cui può essere registrata la logica del plugin. La fase (in inglese \textit{stage}) indica in quale punto del ciclo di esecuzione del plugin deve essere eseguito il codice. In tabella~\ref{table:pluginStages} si possono consultare le fasi per cui è possibile registrare un plugin.  
+La pipeline di un plugin è divisa in molteplici fasi su cui può essere registrata la logica del plugin. La fase (in inglese \textit{stage}) indica in quale punto del ciclo di esecuzione del plugin deve essere eseguito il codice. In Tabella~\ref{table:pluginStages} si possono consultare le fasi per cui è possibile registrare un plugin.  
 
 \begin{figure}[ht]
   \centering
@@ -181,13 +181,13 @@ La pipeline di un plugin è divisa in molteplici fasi su cui può essere registr
     \toprule
       \textbf{Evento} & \textbf{Nome della fase} & \textbf{Descrizione} \\
     \midrule
-      Pre-Event & Pre-validation &  Fase della pipeline per i plugin che devono essere eseguiti prima la MainOperation. I plugin registrati in questa fase possono essere eseguiti all'esterno della transazione del database. \\
+      Pre-Event & Pre-validation &  Fase della pipeline per i plugin che devono essere eseguiti prima della MainOperation. I plugin registrati in questa fase possono essere eseguiti all'\textbf{esterno} della transazione del database. \\
     \midrule
-      Pre-Event & Pre-operation & Fase della pipeline per i plugin che devono essere eseguiti prima la MainOperation. I plugin registrati in questa fase sono eseguiti all'interno della transazione del database. \\
+      Pre-Event & Pre-operation & Fase della pipeline per i plugin che devono essere eseguiti prima della MainOperation. I plugin registrati in questa fase sono eseguiti all'\textbf{interno} della transazione del database. \\
     \midrule
       Platform Core Operation & MainOperation &  L'operazione principale eseguita dal sistema, come creazione, aggiornamento, eliminazione di un record. Nessun plugin può essere registrato per questa fase. \\
     \midrule
-      PostEvent & Post-operation &  Fase della pipeline per i plugin che devono essere eseguiti dopo la MainOperation. I plugin registrati in questa fase sono eseguiti all'interno della transazione del database. \\
+      PostEvent & Post-operation &  Fase della pipeline per i plugin che devono essere eseguiti dopo della MainOperation. I plugin registrati in questa fase sono eseguiti all'\textbf{interno} della transazione del database. \\
     \bottomrule
   \end{tabular}
   \caption{Fasi del ciclo di esecuzione di un Plugin}
@@ -198,11 +198,11 @@ Ogni volta che il CRM invoca un evento, come ad esempio il salvataggio di un rec
 Per prima cosa l'evento innesca la chiamata al CRM Organization Web Service e l'esecuzione viene fatta passare attraverso le fasi della pipeline. Internamente le informazioni vengono trasmesse mediante un messaggio di tipo OrganizationRequest il quale viene intercettato dai plugin di tipo Pre-Event che possono modificarne le informazioni prima che venga passato alla Platform Core Operation. Dopodiché il messaggio viene trasformato in un OrganizationResponse che viene intercettato dai plugin Post-Operation i quali possono modificarne le informazioni prima.
 Infine, l'esecuzione viene ritornata all'applicazione che ha invocato l'evento.
 
-Il \textit{Message} specifica, come nel caso dei Workflow, il tipo di evento su cui il plugin è registrato. Per esempio, un plugin può essere registrato su un Create Message di un'entità Contact. In questo caso il codice del plugin verrebbe eseguito ogni qual volta un record Contact viene creato. Per le entità di default del CRM sono supportati più di 100 message diversi, mentre per le entità custom la scelta è più limitata.
+Il campo \textit{Message} specifica, come nel caso dei Workflow, il tipo di evento su cui il plugin è registrato. Per esempio, un plugin può essere registrato su un Create Message di un'entità Contact. In questo caso il codice del plugin verrebbe eseguito ogni qual volta un record Contact viene creato. Per le entità di default del CRM sono supportati più di 100 message diversi, mentre per le entità custom la scelta è più limitata.
 
 \subsubsection{Differenze tra Workflow e Plugin}
 Sia i Workflow che i Plugin possono essere utilizzati per estendere e le funzionalità del CRM. In molti casi i due approcci sono intercambiabili e possono essere utilizzati uno al posto dell'altro senza nessun problema. 
-Tuttavia, la documentazione ufficiale Microsoft~\cite{PluginVSWorkflow} suggerisce alcune linee guida riportate in tabella~\ref{table:pluginVsWorkflow}. Inoltre, i colleghi più esperti mi hanno spiegato che in generale preferiscono usare i plugin in caso di logica sincrona oppure molto complessa, mentre i workflow per la logica asincrona o per processi semplici e da eseguire in seguito a una richiesta dell'utente, come ad esempio l'invio automatico di email.
+Tuttavia, la documentazione ufficiale Microsoft~\cite{PluginVSWorkflow} suggerisce alcune linee guida riportate in Tabella~\ref{table:pluginVsWorkflow}. Inoltre, i colleghi più esperti mi hanno spiegato che in generale preferiscono usare i plugin in caso di logica sincrona oppure molto complessa, mentre i workflow per la logica asincrona o per processi semplici e da eseguire in seguito a una richiesta dell'utente, come ad esempio l'invio automatico di email.
 
 \begin{table}[ht]
   \centering
@@ -258,7 +258,7 @@ I due principali tipi di flussi di lavoro supportati da Power Automate sono i fl
 \end{figure}
 
 \subsection{Flussi Cloud}
-In Microsoft Power Automate un flusso è rappresentato mediante un diagramma a blocchi come si può vedere in figura~\ref{fig:flowExample}. Ogni flusso inizia sempre con un blocco di tipo \textit{trigger}, il quale permette di avviare l'esecuzione del flusso in seguito al verificarsi di un evento specificato. La maggior parte dei connettori disponibili offre diversi trigger predefiniti da utilizzare per avviare i flussi. Tutti gli altri blocchi utilizzabili sono blocchi di tipo \textit{action} e permettono di eseguire operazioni come la creazione di record nel CRM, la chiamata ad API esterne, l'invio di email e altro, a seconda di ciò che viene reso disponibile dai vari connettori.
+In Microsoft Power Automate un flusso è rappresentato mediante un diagramma a blocchi come si può vedere in Figura~\ref{fig:flowExample}. Ogni flusso inizia sempre con un blocco di tipo \textit{trigger}, il quale permette di avviare l'esecuzione del flusso in seguito al verificarsi di un evento specificato. La maggior parte dei connettori disponibili offre diversi trigger predefiniti da utilizzare per avviare i flussi. Tutti gli altri blocchi utilizzabili sono blocchi di tipo \textit{action} e permettono di eseguire operazioni come la creazione di record nel CRM, la chiamata ad API esterne, l'invio di email e altro, a seconda di ciò che viene reso disponibile dai vari connettori.
 
 Un connettore non è altro che un proxy o un wrapper intorno a un'API che consente al servizio sottostante di comunicare con Microsoft Power Automate. Consente agli utenti di connettere i loro account e sfruttare un set di trigger e azioni predefiniti per sviluppare i flussi di lavoro. Microsoft mette a disposizione numerosi connettori (gratuiti e a pagamento) già pronti per essere utilizzati ed è possibile inoltre per gli sviluppatori creare dei connettori custom per poter integrare il proprio servizio web o API nell'ecosistema Power Automate.
 
@@ -270,7 +270,7 @@ Un connettore non è altro che un proxy o un wrapper intorno a un'API che consen
 \end{figure}
 
 \subsubsection{Trigger e Action}
-Attraverso l'interfaccia grafica è possibile creare blocchi trigger e action, ai quali si possono passare dati o espressioni in maniera molto semplice e intuitiva come in figura~\ref{fig:actionExample} nella quale è visibile una action per la creazione di un file su dropbox che utilizza i dati di un tweet restituiti da un trigger. Attraverso il pannello laterale \textit{Dynamic Content} si possono inserire i valori dinamici ritornati da action o trigger precedenti. È possibile inserire espressioni in linguaggio OData all'interno dei campi di testo oppure espressioni più complesse  in linguaggio \textit{Workflow Definition Language} mediante il pannello laterale \textit{Expression}\cite{WorkflowDefinitioLanguage}.
+Attraverso l'interfaccia grafica è possibile creare blocchi trigger e action, ai quali si possono passare dati o espressioni in maniera molto semplice e intuitiva come in Figura~\ref{fig:actionExample} nella quale è visibile una action per la creazione di un file su dropbox che utilizza i dati di un tweet restituiti da un trigger. Attraverso il pannello laterale \textit{Dynamic Content} si possono inserire i valori dinamici ritornati da action o trigger precedenti. È possibile inserire espressioni in linguaggio OData all'interno dei campi di testo oppure espressioni più complesse  in linguaggio \textit{Workflow Definition Language} mediante il pannello laterale \textit{Expression}\cite{WorkflowDefinitioLanguage}.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.9\textwidth]{action-example.png}
@@ -278,7 +278,7 @@ Attraverso l'interfaccia grafica è possibile creare blocchi trigger e action, a
   \label{fig:actionExample}
 \end{figure}
 
-Dietro a questa carina e intuitiva interfaccia grafica non si nasconde altro che un oggetto JSON definito rispettando le specifiche del linguaggio sopracitato. Di seguito il listato corrispondente all'action usata come esempio.
+Dietro a questa semplice e intuitiva interfaccia grafica non si nasconde altro che un oggetto JSON definito rispettando le specifiche del linguaggio sopracitato. Di seguito il listato corrispondente all'action usata come esempio.
 
 \lstinputlisting[language=json]{chapters/02/onedrive-action.json}
 
@@ -313,7 +313,7 @@ La differenza tra le due tipologie si trova nel fatto che nel primo caso il mode
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=0.9\textwidth]{ai-builder-home.png}
+  \includegraphics[width=0.8\textwidth]{ai-builder-home.png}
   \caption{Schermata home di AI Builder.}
   \label{fig:aiBuilderHome}
 \end{figure}
@@ -332,46 +332,46 @@ Tra le limitazioni più importanti, inoltre, vi è il mancato supporto al ricono
 
 Per creare il modello personalizzato di elaborazione dei moduli è necessario per prima cosa specificare i nomi dei campi e delle tabelle che dovranno essere estratti dal documento.
 In seguito, si dovranno caricare i file su cui avverrà il training del modello. AI Builder a questo punto analizzerà i documenti caricati in modo da rilevare la presenza di campi testuali e tabelle.
-L'utente dovrà  selezionare manualmente i campi che si vogliono riconoscere e contrassegnarli con l'etichetta corrispondente come in figura~\ref{fig:aiBuilderFields}, allo stesso modo è possibile contrassegnare tabelle come in figura~\ref{fig:aiBuilderTables}. Non sono supportate le tabelle estese su più pagine, pertanto è necessario definirle come tabelle separate durante il primo passaggio della procedura.
+L'utente dovrà  selezionare manualmente i campi che si vogliono riconoscere e contrassegnarli con l'etichetta corrispondente come in Figura~\ref{fig:aiBuilderFields}; allo stesso modo è possibile contrassegnare tabelle come in Figura~\ref{fig:aiBuilderTables}. Non sono supportate le tabelle estese su più pagine, pertanto è necessario definirle come tabelle separate durante il primo passaggio della procedura.
 
 Terminato il passaggio di etichettatura di campi e tabelle sui documenti di training, AI Builder procede con il training del modello.
 
-\begin{figure}[ht!]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=0.9\textwidth]{ai-builder-fields.png}
   \caption{Etichettatura di campi testuali in AI Builder.}
   \label{fig:aiBuilderFields}
 \end{figure}
 
-\begin{figure}[ht!]
+Al termine del training è possibile effettuare un test rapido sulle performance del modello caricando manualmente un documento. In seguito all'analisi, verranno mostrati i campi ed eventuali tabelle riconosciute e una percentuale di \textit{confidence} per ciascun campo. Questo dato indica quanto il modello ritiene di essere stato preciso nel riconoscimento di quel valore. In Figura~\ref{fig:aiBuilderTest} un esempio.
+Dopodiché per utilizzare un modello all'interno di app e servizi Microsoft è necessario pubblicarlo mediante l'apposito pulsante.
+
+\begin{figure}[ht]
   \centering
   \includegraphics[width=0.9\textwidth]{ai-builder-tables.png}
   \caption{Etichettatura di tabelle in AI Builder.}
   \label{fig:aiBuilderTables}
 \end{figure}
 
-Al termine del training è possibile effettuare un test rapido sulle performance del modello caricando manualmente un documento. In seguito all'analisi, verranno mostrati i campi ed eventuali tabelle riconosciute e una percentuale di \textit{confidence} per ciascun campo. Questo dato indica quanto il modello ritiene di essere stato preciso nel riconoscimento di quel valore. In figura~\ref{fig:aiBuilderTest} un esempio.
-Dopodiché per utilizzare un modello all'interno di app e servizi Microsoft è necessario pubblicarlo mediante l'apposito pulsante.
-
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=0.7\textwidth]{ai-builder-test.png}
+  \includegraphics[width=0.8\textwidth]{ai-builder-test.png}
   \caption{Esempio dell'esito del test rapido su un documento.}
   \label{fig:aiBuilderTest}
 \end{figure}
 
 \subsubsection{Utilizzo in Power Automate}
-Per utilizzare un modello AI Builder in un flusso Power Automate è sufficiente utilizzare l'action  del connettore AI Builder corrispondente al tipo di modello necessario. Per utilizzare un modello di elaborazione dei moduli, ad esempio, bisogna utilizzare la action \textit{Process and save information from forms} e selezionare il modello pubblicato, il tipo di documento e passare il file stesso come contenuto dinamico. Nell'esempio in figura il documento viene recuperato da un trigger manuale che richiede l'inserimento di un file da parte dell'utente. Nulla vieta tuttavia che il documento da analizzare possa essere l'allegato di un'email oppure un file in Onedrive o Sharepoint. Sarà necessario semplicemente utilizzare una action del relativo connettore per recuperare il file desiderato.
+Per utilizzare un modello AI Builder in un flusso Power Automate è sufficiente utilizzare l'action  del connettore AI Builder corrispondente al tipo di modello necessario. Per utilizzare un modello di elaborazione dei moduli, ad esempio, bisogna utilizzare la action \textit{Process and save information from forms} e selezionare il modello pubblicato, il tipo di documento e passare il file stesso come contenuto dinamico. Nell'esempio in Figura~\ref{fig:flowAIBuilder} il documento viene recuperato da un trigger manuale che richiede l'inserimento di un file da parte dell'utente. Nulla vieta tuttavia che il documento da analizzare possa essere l'allegato di un'email oppure un file in Onedrive o Sharepoint. Sarà necessario semplicemente utilizzare una action del relativo connettore per recuperare il file desiderato.
 
-\begin{figure}[ht!]
+Come output viene ritornato un oggetto JSON contenente dati diversi a seconda del tipo di modello utilizzato. Nel caso di esempio per ogni campo vengono ritornati, il valore corrispondente, il punteggio di confidence, le coordinate del riquadro che racchiude il valore, il numero di pagina in cui si trova il valore e altri dati. In appendice è disponibile un esempio di oggetto JSON restituito.
+I dati contenuti in questo oggetto inoltre vengono interpretati da Power Automate e resi disponibili come contenuto dinamico per essere utilizzati nel flusso da altre action.
+
+\begin{figure}[ht]
   \centering
   \includegraphics[width=0.7\textwidth]{flow-ai-builder.png}
   \caption{Esempio di utilizzo di una action AI Builder in un flusso Power Automate.}
   \label{fig:flowAIBuilder}
 \end{figure}
-
-Come output viene ritornato un oggetto JSON contenente dati diversi a seconda del tipo di modello utilizzato. Nel caso di esempio per ogni campo vengono ritornati, il valore corrispondente, il punteggio di confidence, le coordinate del riquadro che racchiude il valore, il numero di pagina in cui si trova il valore e altri dati. In appendice è disponibile un esempio di oggetto JSON restituito.
-I dati contenuti in questo oggetto inoltre vengono interpretati da Power Automate e resi disponibili come contenuto dinamico per essere utilizzati nel flusso da altre action.
 
 \subsubsection{Criticità di AI Builder}
 Nonostante AI Builder sia uno strumento molto potente per gli utilizzi per cui è proposto, risulta anche molto limitante. Prendendo ad esempio il modello di elaborazione di documenti, che è quello con cui ho avuto più a che fare durante i due progetti, si ottengono risultati positivi solo quando i documenti analizzati sono tra loro identici nella struttura a quelli utilizzati per il training. Le uniche differenze infatti devono trovarsi nei dati contenuti; qualora posizionamento, font e dimensione del testo differiscano, il modello fallisce. Microsoft tuttavia non menziona in nessun modo questo dettaglio nella documentazione.
