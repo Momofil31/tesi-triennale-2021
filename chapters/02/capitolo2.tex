@@ -1,6 +1,7 @@
 \graphicspath{{./chapters/02/assets/}}
 
 \chapter{Analisi delle tecnologie}
+\label{cha:analisiTecnologie}
 In questo capitolo viene effettuata un'analisi dettagliata delle tecnologie Microsoft apprese e utilizzate durante il tirocinio.
 
 \section{Microsoft Dynamics CRM}
@@ -319,12 +320,14 @@ La differenza tra le due tipologie si trova nel fatto che nel primo caso il mode
 \end{figure}
 
 \subsection{Creazione di un modello personalizzato}
+\label{ssec:creazioneModello}
 Nel caso di modelli personalizzati in fase di creazione di un modello è necessario fornire un dataset di training. Essendo una feature low-code/no-code i passaggi necessari sono abbastanza semplici. Per fornire il dataset di training si hanno due possibilità a seconda del tipo di dati che il modello in questione prende come input: testo o immagini/documenti. Se il modello effettua analisi di testo il dataset di training dovrà essere fornito utilizzando una tabella Dataverse, un altro servizio Microsoft che permette di archiviare e gestire dati utilizzati nelle applicazioni Microsoft. Questa tabella dovrà contenere i dati di training secondo le specifiche definite per il singolo modello. In altre parole, modelli diversi richiedono dati diversi, etichettati in modo diverso. 
 Se il modello lavora su dati come documenti o immagini, invece, si dovrà seguire la procedura guidata all'interno di AI Builder, che permetterà di caricare ed etichettare i documenti su cui fare il training. 
 
 Una volta terminato il training del modello è possibile testarlo, con altri dati non etichettati e valutarne le performance. Dopodiché il modello è pronto per essere pubblicato ed utilizzato in Microsoft Power Automate. Esiste infatti un connettore apposito per AI Builder.
 
 \subsubsection{Esempio: modello di elaborazione moduli}
+\label{sssec:esempioModello}
 Il modello di elaborazione moduli fornito da AI Builder consente di leggere e salvare informazioni da documenti standard come fatture o documenti fiscali. Automatizzando questo processo è possibile risparmiare molto tempo evitando, ad esempio, che l'utente debba passare ore a trascrivere a mano fatture all'interno di un gestionale.
 
 Il modello, tuttavia, presenta ancora alcune limitazioni, come ad esempio il formato del file (PDF, JPG, PNG), il numero di pagine  e la dimensione del documento (non più di 500 pagine per i PDF e 50 MB) e il supporto al solo alfabeto latino.
