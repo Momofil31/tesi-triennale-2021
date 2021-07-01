@@ -73,6 +73,11 @@ Il CRM fornisce undici tipi di campi:
 
 A partire dalla versione 2011 inoltre è disponibile un particolare tipo di campo chiamato Party List. Questo tipo consente di mappare una relazione tra entità come nel caso del tipo Lookup ma con la differenza che quest'ultimo può mappare una relazione con una singola entità mentre un campo di tipo Party List permette di avere una relazione con entità multiple. Per esempio, una email può essere associata a un Contact, un User o una Queue.
 
+\subsection{Queue}
+Le Queue sono contenitori usati per raccogliere record del CRM che siano da completare o che richiedano un'azione, come per esempio il completamento di un \textit{task} o la chiusura di un Case.
+Sono molto utili quando è necessario avere una lista centralizzata di lavoro in attesa di essere completato, oppure quando sia necessario ordinare le attività in base al tipo o agli utenti assegnati per completarle.
+Inoltre, possono essere utilizzate per suddividere in categorie e assegnare priorità alle Activity e ai Case. \cite{Queues}
+
 \subsection{Moduli (Forms)}
 Per creare, aggiornare o modificare un record nel CRM si utilizzano i Form. Ad ogni entità possono dunque essere associati uno o più Form. A seconda dell'opzione di visualizzazione scelta, del modulo funzionale selezionato o del tipo di utente che interagisce con il CRM possono essere visualizzati Form diversi. 
 I form possono essere creati attraverso un'interfaccia apposita presente nelle impostazioni di customizzazione del CRM.
@@ -341,7 +346,7 @@ Terminato il passaggio di etichettatura di campi e tabelle sui documenti di trai
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.9\textwidth]{ai-builder-fields.png}
+  \includegraphics[width=\textwidth]{ai-builder-fields.png}
   \caption{Etichettatura di campi testuali in AI Builder.}
   \label{fig:aiBuilderFields}
 \end{figure}
@@ -349,9 +354,9 @@ Terminato il passaggio di etichettatura di campi e tabelle sui documenti di trai
 Al termine del training è possibile effettuare un test rapido sulle performance del modello caricando manualmente un documento. In seguito all'analisi, verranno mostrati i campi ed eventuali tabelle riconosciute e una percentuale di \textit{confidence} per ciascun campo. Questo dato indica quanto il modello ritiene di essere stato preciso nel riconoscimento di quel valore. In Figura~\ref{fig:aiBuilderTest} un esempio.
 Dopodiché per utilizzare un modello all'interno di app e servizi Microsoft è necessario pubblicarlo mediante l'apposito pulsante.
 
-\begin{figure}[ht]
+\begin{figure}[ht!]
   \centering
-  \includegraphics[width=0.9\textwidth]{ai-builder-tables.png}
+  \includegraphics[width=\textwidth]{ai-builder-tables.png}
   \caption{Etichettatura di tabelle in AI Builder.}
   \label{fig:aiBuilderTables}
 \end{figure}
@@ -364,12 +369,13 @@ Dopodiché per utilizzare un modello all'interno di app e servizi Microsoft è n
 \end{figure}
 
 \subsubsection{Utilizzo in Power Automate}
+\label{ssec:utilizzoInPowerAutomate}
 Per utilizzare un modello AI Builder in un flusso Power Automate è sufficiente utilizzare l'action  del connettore AI Builder corrispondente al tipo di modello necessario. Per utilizzare un modello di elaborazione dei moduli, ad esempio, bisogna utilizzare la action \textit{Process and save information from forms} e selezionare il modello pubblicato, il tipo di documento e passare il file stesso come contenuto dinamico. Nell'esempio in Figura~\ref{fig:flowAIBuilder} il documento viene recuperato da un trigger manuale che richiede l'inserimento di un file da parte dell'utente. Nulla vieta tuttavia che il documento da analizzare possa essere l'allegato di un'email oppure un file in Onedrive o Sharepoint. Sarà necessario semplicemente utilizzare una action del relativo connettore per recuperare il file desiderato.
 
-Come output viene ritornato un oggetto JSON contenente dati diversi a seconda del tipo di modello utilizzato. Nel caso di esempio per ogni campo vengono ritornati, il valore corrispondente, il punteggio di confidence, le coordinate del riquadro che racchiude il valore, il numero di pagina in cui si trova il valore e altri dati. In appendice è disponibile un esempio di oggetto JSON restituito.
+Come output viene ritornato un oggetto JSON contenente dati diversi a seconda del tipo di modello utilizzato. Nel caso di esempio per ogni campo vengono ritornati, il valore corrispondente, il punteggio di confidence, le coordinate del riquadro che racchiude il valore, il numero di pagina in cui si trova il valore e altri dati. In Appendice~\ref{sec:completeOutputJson} è disponibile un esempio di oggetto JSON restituito.
 I dati contenuti in questo oggetto inoltre vengono interpretati da Power Automate e resi disponibili come contenuto dinamico per essere utilizzati nel flusso da altre action.
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
   \centering
   \includegraphics[width=0.7\textwidth]{flow-ai-builder.png}
   \caption{Esempio di utilizzo di una action AI Builder in un flusso Power Automate.}
@@ -380,9 +386,4 @@ I dati contenuti in questo oggetto inoltre vengono interpretati da Power Automat
 Nonostante AI Builder sia uno strumento molto potente per gli utilizzi per cui è proposto, risulta anche molto limitante. Prendendo ad esempio il modello di elaborazione di documenti, che è quello con cui ho avuto più a che fare durante i due progetti, si ottengono risultati positivi solo quando i documenti analizzati sono tra loro identici nella struttura a quelli utilizzati per il training. Le uniche differenze infatti devono trovarsi nei dati contenuti; qualora posizionamento, font e dimensione del testo differiscano, il modello fallisce. Microsoft tuttavia non menziona in nessun modo questo dettaglio nella documentazione.
 
 Inoltre, avendo potuto lavorare con le varie tecniche di machine learning durante il corso \textit{Introduction to Machine Learning}, mi sono trovato impossibilitato a utilizzare le metodologie apprese, in particolare riguardo la validazione e il testing, in quanto AI Builder non fornisce alcun modo per poter effettuare testing su larga scala e quindi raccogliere dati e analizzarli. In sostanza bisogna fidarsi dello strumento e credo che in ambito business non sia una buona pratica. Chiaramente essendo un prodotto mirato a una classe di utenti non esperta credo che il compromesso sia comunque buono.
-
-
-
-
-
 

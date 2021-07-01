@@ -28,8 +28,10 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{multicol}
+\usepackage{multirow}
 \usepackage{subfig}
 \usepackage[output-decimal-marker={,}]{siunitx}
+\usepackage[export]{adjustbox}
 %%%%%%%%%%%%%%
 % supporto lettere accentate
 %
@@ -42,11 +44,11 @@
 \definecolor{delim}{RGB}{20,105,176}
 \colorlet{numb}{magenta!60!black}
 \lstdefinelanguage{json}{
-    basicstyle=\normalfont\ttfamily,
+    basicstyle=\ttfamily\small,
     numbers=left,
     numberstyle=\scriptsize,
     stepnumber=1,
-    numbersep=8pt,
+    %numbersep=8pt,
     showstringspaces=false,
     breaklines=true,
     frame=lines,
@@ -67,6 +69,30 @@
       {\}}{{{\color{delim}{\}}}}}{1}
       {[}{{{\color{delim}{[}}}}{1}
       {]}{{{\color{delim}{]}}}}{1},
+}
+\definecolor{bluekeywords}{rgb}{0,0,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.64,0.08,0.08}
+\definecolor{xmlcomments}{rgb}{0.5,0.5,0.5}
+\definecolor{types}{rgb}{0.17,0.57,0.68}
+
+\lstset{language=[Sharp]C,
+texcl=true,
+captionpos=b,
+numbers=left, %Nummerierung
+numberstyle=\scriptsize, % kleine Zeilennummern
+frame=lines, % Oberhalb und unterhalb des Listings ist eine Linie
+showspaces=false,
+showtabs=false,
+breaklines=true,
+showstringspaces=false,
+breakatwhitespace=true,
+escapeinside={(*@}{@*)},
+commentstyle=\color{greencomments},
+morekeywords={partial, var, value, get, set},
+keywordstyle=\color{bluekeywords},
+stringstyle=\color{redstrings},
+basicstyle=\ttfamily\small,
 }
 
 \singlespacing
@@ -166,7 +192,8 @@
       \input{chapters/01/capitolo1}
       \input{chapters/02/capitolo2}
       \input{chapters/03/capitolo3}
-      %\input{capitolo4}
+      \input{chapters/04/capitolo4}
+      \input{chapters/05/capitolo5}
       
       
     \endgroup
@@ -212,6 +239,6 @@
         {\normalfont\Huge\bfseries}{Allegato \thechapter}{1em}{}
     % sezione Allegati - opzionale
     \appendix
-    %\input{chapters/appendix/allegati}
+    \input{chapters/appendix/allegati}
 
 \end{document}
