@@ -120,34 +120,109 @@ Per la conversione del Lead in Opportunity ho scelto di utilizzare un Plugin reg
 
 Mediante un'istanza di \lstinline[language={[Sharp]C}]{IOrganizationService} si ottiene il contesto in cui il plugin viene eseguito, e in questo modo è possibile, ad esempio, avere informazioni sul record che ha avviato l'esecuzione. La classe \lstinline[language={[Sharp]C}]{ITracingService} permette di stampare dei log sul CRM. 
 
-Per prima cosa il codice effettua dei controlli sull'esistenza di un Account o Contact a cui associare l'Opportunity una volta convertita in Lead. Con la classe \lstinline[language={[Sharp]C}]{QueryExpression} è possibile, infatti, interrogare il CRM per ottenere dei record, come fosse una SELECT su un database. 
-Successivamente viene utilizzato un Message \lstinline[language={[Sharp]C}]{QualifyLeadRequest}, che fornisce la funzionalità standard di conversione di un Lead in Opportunity. A quest'ultimo vengono passati come parametri il Lead da qualificare ed eventuali riferimenti a Contact o Account se già esistenti a sistema. \lstinline[language={[Sharp]C}]{QualifyLeadRequest}, infatti, si occupa di default di creare Contact e Account per il potenziale cliente a partire dal Lead e, per evitare problemi con possibili duplicati, ho deciso di disabilitare il controllo automatico e gestire i duplicati manualmente.
+Per prima cosa il codice effettua dei controlli sull'esistenza di un Account o Contact a cui associare l'Opportunity una volta convertita in Lead. Con la classe \lstinline[language={[Sharp]C}]{QueryExpression} è possibile, infatti, interrogare il CRM per ottenere dei record, come fosse una SELECT su un database. Nel Listato~\ref{QueryExpressionListing} un esempio di utilizzo.
 
-Altre operazioni svolte sono l'aggiornamento di alcuni campi dell'Opportunity creatasi dopo l'esecuzione del suddetto Message. In Appendice~\ref{sec:codicePlugin1} è presente il codice sorgente completo del Plugin.
+\begin{lstlisting}[language={[Sharp]C},breaklines=true,caption={Esempio di utilizzo di una QueryExpression.},label=QueryExpressionListing]
+  // Check if the account already exist 
+  QueryExpression accountQuery = new QueryExpression("account");
+  accountQuery.NoLock = true;
+  accountQuery.ColumnSet = new ColumnSet("accountid");
+  accountQuery.Criteria.AddCondition(new ConditionExpression("name", ConditionOperator.Like, companyName));
+  if (partitaIva != null) accountQuery.Criteria.AddCondition(new ConditionExpression("accountnumber", ConditionOperator.Like, partitaIva));
+  accountQuery.PageInfo.ReturnTotalRecordCount = true;
+  EntityCollection resultsAccount = service.RetrieveMultiple(accountQuery);
+\end{lstlisting}
+
+Successivamente viene utilizzato un Message \lstinline[language={[Sharp]C}]{QualifyLeadRequest}, che fornisce la funzionalità standard di conversione di un Lead in Opportunity. A quest'ultimo vengono passati come parametri il Lead da qualificare ed eventuali riferimenti a Contact o Account se già esistenti a sistema. \lstinline[language={[Sharp]C}]{QualifyLeadRequest}, infatti, si occupa di default di creare Contact e Account per il potenziale cliente a partire dal Lead e, per evitare problemi con possibili duplicati, ho deciso di disabilitare il controllo automatico e gestire i duplicati manualmente. Il Listato~\ref{QualifyLeadRequestListing} riporta quanto appena spiegato.
+
+Altre operazioni svolte sono l'aggiornamento di alcuni campi dell'Opportunity creatasi dopo l'esecuzione del suddetto Message.
+
+\begin{lstlisting}[language={[Sharp]C},breaklines=true,caption={Utilizzo del Message QualifyLeadRequest.},label=QualifyLeadRequestListing]
+  QualifyLeadRequest qualify = new QualifyLeadRequest {
+    CreateOpportunity = true,
+    OpportunityCurrencyId = currencyId,
+    LeadId = new EntityReference(entity.LogicalName, entity.Id),
+    Status = new OptionSetValue(OptionSet.Lead.StatusCode.Qualified)
+  };
+
+  if (contactExists && !accountExists) {
+    // Create account and use existing contact as OpportunityCustomerId
+    qualify.CreateAccount = true;
+    qualify.OpportunityCustomerId = new EntityReference("contact", contactId);
+  } else if (!contactExists && accountExists) {
+    // Create contact and use existing account as OpportunityCustomerId
+    qualify.CreateContact = true;
+    qualify.OpportunityCustomerId = new EntityReference("account", accountId);
+  } else if (contactExists && accountExists) {
+    // Use existing account as OpportunityCustomerId
+    qualify.OpportunityCustomerId = new EntityReference("account", accountId);
+    //if contact is not associated to account 
+  } else {
+    qualify.CreateAccount = true;
+    qualify.CreateContact = true;
+  }
+
+  //Disable DuplicateDetection
+  qualify.Parameters.Add("SuppressDuplicateDetection", true);
+
+  QualifyLeadResponse qualifyRes = (QualifyLeadResponse)service.Execute(qualify);
+\end{lstlisting}
 
 \subsubsection{Invio di email con preventivo}
 \label{ssec:invioEmail}
 Per l'invio automatico dell'email con il preventivo, ho deciso di utilizzare un Plugin registrato sull'Update Message in fase Post-operation dell'entità Quote. 
 
 Per prima cosa viene controllato che il campo \textit{statecode} sia stato aggiornato ad \textit{attivo}, altrimenti l'esecuzione viene interrotta.
-Dopodiché viene generato il documento PDF con il preventivo, codificato in formato \textit{base64}, mediante una chiamata all'Organization Web Service, in questo modo:
+Dopodiché viene generato il documento PDF con il preventivo, codificato in formato \textit{base64}, mediante una chiamata all'Organization Web Service, come visibile nel Listato~\ref{OrganizationRequestListing}.
 
-\begin{lstlisting}[language={[Sharp]C},breaklines=true]
-  OrganizationRequest createPdfRequest = new OrganizationRequest("ExportPdfDocument");
-  createPdfRequest["EntityTypeCode"] = 1084; // Quote typecode
-  createPdfRequest["SelectedTemplate"] = new EntityReference("documenttemplate", documentTemplateId);
-  createPdfRequest["SelectedRecords"] = "[\"{" + quote.Id.ToString() + "}\"]";
+\begin{lstlisting}[language={[Sharp]C},breaklines=true,label=OrganizationRequestListing,caption=Chiamata all'azione ExportPdfDocument per la creazione del documento PDF.]
+  private String generateEncodedPdf(IOrganizationService service, Entity quote, Guid documentTemplateId) {
+      // Request to create pdf
+      OrganizationRequest createPdfRequest = new OrganizationRequest("ExportPdfDocument");
+      createPdfRequest["EntityTypeCode"] = 1084; // Quote typecode
+      createPdfRequest["SelectedTemplate"] = new EntityReference("documenttemplate", documentTemplateId);
+      createPdfRequest["SelectedRecords"] = "[\"{" + quote.Id.ToString() + "}\"]";
 
-  OrganizationResponse createPdfResponse = (OrganizationResponse)service.Execute(createPdfRequest);
+      OrganizationResponse createPdfResponse = (OrganizationResponse)service.Execute(createPdfRequest);
 
-  return Convert.ToBase64String((byte[])createPdfResponse["PdfFile"]);
+      return Convert.ToBase64String((byte[])createPdfResponse["PdfFile"]);
+    }
 \end{lstlisting}
 
-Viene quindi creata l'email a partire da un template presente sul CRM. Per fare ciò prima si recupera il template attraverso una \lstinline[language={[Sharp]C}]{QueryExpression} e, successivamente, il template viene istanziato in un'email grazie a una chiamata al Message \lstinline[language={[Sharp]C}]{IstantiateTemplateRequest}.
+Viene quindi creata l'email a partire da un template presente sul CRM. Per fare ciò prima si recupera il template attraverso una \lstinline[language={[Sharp]C}]{QueryExpression} e, successivamente, il template viene istanziato in un'email grazie a una chiamata al Message \lstinline[language={[Sharp]C}]{IstantiateTemplateRequest}. Nel Listato~\ref{GenerateEmailFromTemplate} è consultabile il codice corrispondente.
 L'email viene poi completata con i valori \textit{destinatario} e \textit{mittente} e vien quindi creato un record Attachment sul CRM utilizzando il documento in formato \textit{base64} generato in precedenza.
 Infine, l'email viene inviata mediante un Message \lstinline[language={[Sharp]C}]{SendEmailRequest}.
 
-In Appendice~\ref{sec:codicePlugin2} è presente il codice sorgente completo del plugin.
+\begin{lstlisting}[language={[Sharp]C},breaklines=true,label=GenerateEmailFromTemplate,caption={Metodo per la creazione di un'email a partire da un template.}]
+    //Create a query expression to get necessary email quote template
+    QueryExpression queryBuildInTemplates = new QueryExpression {
+      EntityName = "template",
+      ColumnSet = new ColumnSet("templateid", "title"),
+      Criteria = new FilterExpression()
+    };
+    queryBuildInTemplates.Criteria.AddCondition("title", ConditionOperator.Equal, "Template Offerta Email");
+    EntityCollection templateEntityCollection = service.RetrieveMultiple(queryBuildInTemplates);
+
+    Guid emailTemplateId = new Guid();
+
+    if (templateEntityCollection.Entities.Count > 0) {
+      emailTemplateId = (Guid)templateEntityCollection.Entities[0].Attributes["templateid"];
+    } else {
+      throw new ArgumentException("Standard Email Templates are missing");
+    }
+
+    // Create the request
+    InstantiateTemplateRequest emailUsingTemplateReq = new InstantiateTemplateRequest {
+      // Use a built-in Email Template of type "quote".
+      TemplateId = emailTemplateId,
+
+      // The regarding Id is required, and must be of the same type as the Email Template.
+      ObjectId = quote.Id,
+      ObjectType = "quote"
+    };
+
+    InstantiateTemplateResponse emailUsingTemplateResp = (InstantiateTemplateResponse)service.Execute(emailUsingTemplateReq);
+\end{lstlisting}
 
 \subsection{Gestione del Case}
 Nell'eventualità che il flusso di elaborazione della risposta del cliente rilevi un documento non valido oppure non presente, procede con la creazione di un record Case la cui descrizione contiene l'output del modello di classificazione di categorie.

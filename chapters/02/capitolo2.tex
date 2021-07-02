@@ -9,7 +9,7 @@ In questo capitolo viene effettuata un'analisi dettagliata delle tecnologie Micr
 Microsoft Dynamics CRM\footnote{Devo davvero ringraziare Tutorialspoint perché la sua guida~\cite{DynamicsTutorialspoint}, su cui mi sono basato per l'elaborazione di questa sezione, mi ha chiarito moltissimi dubbi che la documentazione ufficiale (estremamente confusionaria) e i colleghi in azienda non sono riusciti a risolvermi.} è un pacchetto software per la gestione delle relazioni con il cliente sviluppato da Microsoft. Seppure interamente customizzabile grazie al framework proprietario Microsoft XRM SDK basato su .NET, di base si concentra sui settori Vendite, Marketing e Servizio Clienti.
 
 Il CRM può essere infatti utilizzato per aumentare la produttività delle vendite e l'efficacia del marketing per un'azienda, gestire l'intera catena di assistenza clienti e fornire informazioni sull'andamento dei social media, business intelligence e molte altre caratteristiche e funzionalità pronte all'uso.
-L'interazione utente con Microsoft Dynamics CRM avviene attraverso l'interfaccia web, la quale è ottimizzata anche per l'utilizzo mobile e tablet oltre che desktop.
+L'interazione utente con Microsoft Dynamics CRM avviene attraverso l'interfaccia web, la quale è ottimizzata anche per l'utilizzo mobile e tablet oltre che desktop.~\cite{DynamicsTutorialspoint}
 
 \subsection{Moduli Funzionali}
 Il CRM è interamente progettato sui moduli funzionali Sales, Marketing e Service Management. Questa divisione in moduli è dovuta al fatto che un'azienda, nell'utilizzare il CRM per gestire i propri processi, necessita che gli utenti del settore vendite, ad esempio, abbiano a disposizione delle funzionalità specifiche disponibili nel modulo Sales, parimenti gli utenti del settore marketing con il modulo Marketing e gli utenti del servizio clienti con il modulo Service Management.
@@ -71,12 +71,12 @@ Il CRM fornisce undici tipi di campi:
   \item Lookup
 \end{itemize} 
 
-A partire dalla versione 2011 inoltre è disponibile un particolare tipo di campo chiamato Party List. Questo tipo consente di mappare una relazione tra entità come nel caso del tipo Lookup ma con la differenza che quest'ultimo può mappare una relazione con una singola entità mentre un campo di tipo Party List permette di avere una relazione con entità multiple. Per esempio, una email può essere associata a un Contact, un User o una Queue.
+A partire dalla versione 2011 inoltre è disponibile un particolare tipo di campo chiamato Party List. Questo tipo consente di mappare una relazione tra entità come nel caso del tipo Lookup ma con la differenza che quest'ultimo può mappare una relazione con una singola entità mentre un campo di tipo Party List permette di avere una relazione con entità multiple. Per esempio, una email può essere associata a un Contact, un User o una Queue.~\cite{DynamicsTutorialspoint}
 
 \subsection{Queue}
 Le Queue sono contenitori usati per raccogliere record del CRM che siano da completare o che richiedano un'azione, come per esempio il completamento di un \textit{task} o la chiusura di un Case.
 Sono molto utili quando è necessario avere una lista centralizzata di lavoro in attesa di essere completato, oppure quando sia necessario ordinare le attività in base al tipo o agli utenti assegnati per completarle.
-Inoltre, possono essere utilizzate per suddividere in categorie e assegnare priorità alle Activity e ai Case. \cite{Queues}
+Inoltre, possono essere utilizzate per suddividere in categorie e assegnare priorità alle Activity e ai Case.~\cite{Queues}
 
 \subsection{Moduli (Forms)}
 Per creare, aggiornare o modificare un record nel CRM si utilizzano i Form. Ad ogni entità possono dunque essere associati uno o più Form. A seconda dell'opzione di visualizzazione scelta, del modulo funzionale selezionato o del tipo di utente che interagisce con il CRM possono essere visualizzati Form diversi. 
@@ -99,7 +99,7 @@ Di default la vista a griglia di ogni entità supporta una funzionalità di Rice
   \label{fig:quickSearch}
 \end{figure}
 
-Cliccando invece sull'icona cerchiata in rosso in Figura~\ref{fig:quickSearch} si accede alla ricerca avanzata, disponibile in una nuova finestra. La ricerca avanzata del CRM è una delle funzionalità più utili e potenti disponibili di default. In questa finestra, come si vede in Figura~\ref{fig:advancedSearch}, è possibile selezionare l'entità di cui di vogliono cercare i record, applicare filtri e criteri di raggruppamento e salvare i risultati come viste (\textit{views}) personali.
+Cliccando invece sull'icona cerchiata in rosso in Figura~\ref{fig:quickSearch} si accede alla ricerca avanzata, disponibile in una nuova finestra. La ricerca avanzata del CRM è una delle funzionalità più utili e potenti disponibili di default. In questa finestra, come si vede in Figura~\ref{fig:advancedSearch}, è possibile selezionare l'entità di cui di vogliono cercare i record, applicare filtri e criteri di raggruppamento e salvare i risultati come viste (\textit{views}) personali.~\cite{DynamicsTutorialspoint}
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.7\textwidth]{advanced-search.png}
@@ -123,7 +123,7 @@ Per capire quando può essere necessario l'utilizzo delle Web Resources del CRM 
   \item Si vuole richiamare l'esecuzione di servizi web esterni in seguito ad azioni lato client, senza dover scomodare l'utilizzo di plugin o workflow lato server.
 \end{itemize}
 
-L'accesso a una Web Resource può avvenire mediante il suo URL univoco. Dato che le Web Resource vengono salvate nel database del CRM, possono essere caricate come singolo file o come collezione eterogenea di file (HTML, Javascript, ecc.) oppure possono essere create e/o modificate direttamente dal CRM, mediante un pannello apposito. Questo consente inoltre di semplificare i passaggi in caso di migrazione da un ambiente a un altro, come per qualsiasi altra personalizzazione del CRM. In Tabella~\ref{table:webResourceType} vi è un elenco dei principali tipi di web resource supportati.
+L'accesso a una Web Resource può avvenire mediante il suo URL univoco. Dato che le Web Resource vengono salvate nel database del CRM, possono essere caricate come singolo file o come collezione eterogenea di file (HTML, Javascript, ecc.) oppure possono essere create e/o modificate direttamente dal CRM, mediante un pannello apposito. Questo consente inoltre di semplificare i passaggi in caso di migrazione da un ambiente a un altro, come per qualsiasi altra personalizzazione del CRM. In Tabella~\ref{table:webResourceType} vi è un elenco dei principali tipi di web resource supportati.~\cite{DynamicsTutorialspoint}
 
 \begin{table}[ht]
   \centering
@@ -159,7 +159,7 @@ I workflow del CRM possono essere eseguiti in maniera sincrona o asincrona. In g
 
 L'esecuzione di un workflow può avvenire in seguito a specifici eventi definiti dal \textit{Message} del workflow (ovvero il tipo di evento sul quale un Workflow può essere registrato) i quali possono essere creazione, modifica di uno o più valori o eliminazione di un record. Inoltre, un workflow può avere uno \textit{scope} (in italiano "ambito di lavoro") che può essere User, Business Unit, Parent Child Business Unit o Organization. È possibile quindi specificare su quali record potrà essere eseguito il workflow in base all'utente proprietario dei record e del workflow.
 
-Un workflow dunque non è altro che una sequenza di passaggi che vengono eseguiti sul CRM. Possono essere condizionali, di attesa o azioni. I primi due tipi sono auto esplicativi mentre nel terzo si può avere ad esempio la creazione o l'aggiornamento di un record, l'assegnamento di un record a un utente, l'invio di un'email, l'esecuzione di uno step custom programmato in .NET da uno sviluppatore oppure l'interruzione dell'esecuzione del workflow.
+Un workflow dunque non è altro che una sequenza di passaggi che vengono eseguiti sul CRM. Possono essere condizionali, di attesa o azioni. I primi due tipi sono auto esplicativi mentre nel terzo si può avere ad esempio la creazione o l'aggiornamento di un record, l'assegnamento di un record a un utente, l'invio di un'email, l'esecuzione di uno step custom programmato in .NET da uno sviluppatore oppure l'interruzione dell'esecuzione del workflow.~\cite{DynamicsTutorialspoint}
 
 \subsection{Plugin}
 Un \textit{Plugin} è pezzo di software che si integra con Microsoft Dynamics CRM per modificarne o estenderne il comportamento standard. I plugin si comportano come gestori di eventi (\textit{event handler}) e vengono eseguiti in seguito a un particolare evento nel CRM, specificato in fase di registrazione del plugin. Possono essere scritti in linguaggio C\# oppure Visual Basic e possono essere eseguiti in modalità sincrona o asincrona.
@@ -196,7 +196,7 @@ La pipeline di un plugin è divisa in molteplici fasi su cui può essere registr
       PostEvent & Post-operation &  Fase della pipeline per i plugin che devono essere eseguiti dopo della MainOperation. I plugin registrati in questa fase sono eseguiti all'\textbf{interno} della transazione del database. \\
     \bottomrule
   \end{tabular}
-  \caption{Fasi del ciclo di esecuzione di un Plugin}
+  \caption{Fasi del ciclo di esecuzione di un Plugin.~\cite{DynamicsTutorialspoint}}
   \label{table:pluginStages}
 \end{table}
 
@@ -204,7 +204,7 @@ Ogni volta che il CRM invoca un evento, come ad esempio il salvataggio di un rec
 Per prima cosa l'evento innesca la chiamata al CRM Organization Web Service e l'esecuzione viene fatta passare attraverso le fasi della pipeline. Internamente le informazioni vengono trasmesse mediante un messaggio di tipo OrganizationRequest il quale viene intercettato dai plugin di tipo Pre-Event che possono modificarne le informazioni prima che venga passato alla Platform Core Operation. Dopodiché il messaggio viene trasformato in un OrganizationResponse che viene intercettato dai plugin Post-Operation i quali possono modificarne le informazioni prima.
 Infine, l'esecuzione viene ritornata all'applicazione che ha invocato l'evento.
 
-Il campo \textit{Message} specifica, come nel caso dei Workflow, il tipo di evento su cui il plugin è registrato. Per esempio, un plugin può essere registrato su un Create Message di un'entità Contact. In questo caso il codice del plugin verrebbe eseguito ogni qual volta un record Contact viene creato. Per le entità di default del CRM sono supportati più di 100 message diversi, mentre per le entità custom la scelta è più limitata.
+Il campo \textit{Message} specifica, come nel caso dei Workflow, il tipo di evento su cui il plugin è registrato. Per esempio, un plugin può essere registrato su un Create Message di un'entità Contact. In questo caso il codice del plugin verrebbe eseguito ogni qual volta un record Contact viene creato. Per le entità di default del CRM sono supportati più di 100 message diversi, mentre per le entità custom la scelta è più limitata.~\cite{DynamicsTutorialspoint}
 
 \subsubsection{Differenze tra Workflow e Plugin}
 Sia i Workflow che i Plugin possono essere utilizzati per estendere e le funzionalità del CRM. In molti casi i due approcci sono intercambiabili e possono essere utilizzati uno al posto dell'altro senza nessun problema. 
@@ -227,7 +227,7 @@ Tuttavia, la documentazione ufficiale Microsoft~\cite{PluginVSWorkflow} suggeris
     Persistenza del processo e dei dati & I plugin vengono eseguiti fino al completamento & I workflow possono essere messi in pausa, posposti, cancellati e ripresi mediante chiamate all'SDK o dall'utente mediante l'interfaccia web del CRM. Lo stato di un Workflow viene salvato automaticamente prima di essere messo in pausa o posposto. \\
     \bottomrule
   \end{tabular}
-  \caption{Come scegliere se utilizzare un Plugin o un Workflow}
+  \caption{Come scegliere se utilizzare un Plugin o un Workflow.~\cite{PluginVSWorkflow}}
   \label{table:pluginVsWorkflow}
 \end{table}
 
@@ -240,11 +240,11 @@ La prima contiene tutti i componenti definiti di default in Microsoft Dynamics C
 
 Una soluzione Managed è una soluzione che si intende distribuire e installare nel CRM del cliente. In particolare può essere installata sulla soluzione di default o su altre soluzioni Managed. Su una soluzione di questo tipo non è possibile quindi aggiungere o rimuovere componenti, è tuttavia permessa la modifica dei componenti presenti.
 
-Una soluzione Unmanaged è una soluzione da considerarsi ancora in fase di sviluppo e che non si intende distribuire. In una soluzione Unmanaged è possibile aggiungere, rimuovere, modificare ed eliminare componenti. Ogni nuova soluzione inoltre è impostata di default come di tipo Unmanaged.
+Una soluzione Unmanaged è una soluzione da considerarsi ancora in fase di sviluppo e che non si intende distribuire. In una soluzione Unmanaged è possibile aggiungere, rimuovere, modificare ed eliminare componenti. Ogni nuova soluzione inoltre è impostata di default come di tipo Unmanaged.~\cite{DynamicsTutorialspoint}
 
 \section{Microsoft Power Automate}
 Microsoft Power Automate, in precedenza conosciuto come Microsoft Flow, è un servizio online per la creazione di flussi di lavoro \textit{low-code/no-code} in grado di automatizzare operazioni su diverse app e servizi, sia sviluppati da Microsoft che non.
-È possibile connettersi infatti a più di 220 servizi e gestire i dati sia in cloud che in locale come ad esempio con SharePoint o Microsoft SQL Server. La lista di connettori ad app e servizi disponibili inoltre, è in continua crescita in quanto Microsoft lavora a stretto contatto con i vari partner per estendere le possibilità di Power Automate.
+È possibile connettersi infatti a più di 220 servizi e gestire i dati sia in cloud che in locale come ad esempio con SharePoint o Microsoft SQL Server. La lista di connettori ad app e servizi disponibili inoltre, è in continua crescita in quanto Microsoft lavora a stretto contatto con i vari partner per estendere le possibilità di Power Automate.~\cite{FlussiPowerAutomate}
 
 I due principali tipi di flussi di lavoro supportati da Power Automate sono i flussi cloud e i flussi desktop.
 \paragraph{Flussi Cloud} Si dividono in tre tipologie:
@@ -254,7 +254,7 @@ I due principali tipi di flussi di lavoro supportati da Power Automate sono i fl
   \item Flussi pianificati - Permettono di pianificare un'automazione ad una specifica ora come ad esempio il caricamento giornaliero di dati in SharePoint o in un database
 \end{itemize}
 
-\paragraph{Flussi Desktop} Vengono utilizzati per automatizzare attività ripetitive sul Web o sul desktop. È possibile ad esempio creare flussi per organizzare documenti mediante azioni su file e cartelle, estrarre dati da siti web e archiviarli su file Excel, inserire fatture in software gestionali e molto altro.
+\paragraph{Flussi Desktop} Vengono utilizzati per automatizzare attività ripetitive sul Web o sul desktop. È possibile ad esempio creare flussi per organizzare documenti mediante azioni su file e cartelle, estrarre dati da siti web e archiviarli su file Excel, inserire fatture in software gestionali e molto altro.~\cite{FlussiPowerAutomate}
 
 \begin{figure}[ht!]
   \centering
@@ -266,7 +266,7 @@ I due principali tipi di flussi di lavoro supportati da Power Automate sono i fl
 \subsection{Flussi Cloud}
 In Microsoft Power Automate un flusso è rappresentato mediante un diagramma a blocchi come si può vedere in Figura~\ref{fig:flowExample}. Ogni flusso inizia sempre con un blocco di tipo \textit{trigger}, il quale permette di avviare l'esecuzione del flusso in seguito al verificarsi di un evento specificato. La maggior parte dei connettori disponibili offre diversi trigger predefiniti da utilizzare per avviare i flussi. Tutti gli altri blocchi utilizzabili sono blocchi di tipo \textit{action} e permettono di eseguire operazioni come la creazione di record nel CRM, la chiamata ad API esterne, l'invio di email e altro, a seconda di ciò che viene reso disponibile dai vari connettori.
 
-Un connettore non è altro che un proxy o un wrapper intorno a un'API che consente al servizio sottostante di comunicare con Microsoft Power Automate. Consente agli utenti di connettere i loro account e sfruttare un set di trigger e azioni predefiniti per sviluppare i flussi di lavoro. Microsoft mette a disposizione numerosi connettori (gratuiti e a pagamento) già pronti per essere utilizzati ed è possibile inoltre per gli sviluppatori creare dei connettori custom per poter integrare il proprio servizio web o API nell'ecosistema Power Automate.
+Un connettore non è altro che un proxy o un wrapper intorno a un'API che consente al servizio sottostante di comunicare con Microsoft Power Automate. Consente agli utenti di connettere i loro account e sfruttare un set di trigger e azioni predefiniti per sviluppare i flussi di lavoro. Microsoft mette a disposizione numerosi connettori (gratuiti e a pagamento) già pronti per essere utilizzati ed è possibile inoltre per gli sviluppatori creare dei connettori custom per poter integrare il proprio servizio web o API nell'ecosistema Power Automate.~\cite{ConnettoriPowerAutomate}
 
 \begin{figure}[ht!]
   \centering
@@ -276,7 +276,7 @@ Un connettore non è altro che un proxy o un wrapper intorno a un'API che consen
 \end{figure}
 
 \subsubsection{Trigger e Action}
-Attraverso l'interfaccia grafica è possibile creare blocchi trigger e action, ai quali si possono passare dati o espressioni in maniera molto semplice e intuitiva come in Figura~\ref{fig:actionExample} nella quale è visibile una action per la creazione di un file su dropbox che utilizza i dati di un tweet restituiti da un trigger. Attraverso il pannello laterale \textit{Dynamic Content} si possono inserire i valori dinamici ritornati da action o trigger precedenti. È possibile inserire espressioni in linguaggio OData all'interno dei campi di testo oppure espressioni più complesse  in linguaggio \textit{Workflow Definition Language} mediante il pannello laterale \textit{Expression}\cite{WorkflowDefinitioLanguage}.
+Attraverso l'interfaccia grafica è possibile creare blocchi trigger e action, ai quali si possono passare dati o espressioni in maniera molto semplice e intuitiva come in Figura~\ref{fig:actionExample} nella quale è visibile una action per la creazione di un file su dropbox che utilizza i dati di un tweet restituiti da un trigger. Attraverso il pannello laterale \textit{Dynamic Content} si possono inserire i valori dinamici ritornati da action o trigger precedenti. È possibile inserire espressioni in linguaggio OData all'interno dei campi di testo oppure espressioni più complesse  in linguaggio \textit{Workflow Definition Language} mediante il pannello laterale \textit{Expression}.~\cite{WorkflowDefinitioLanguage}
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.9\textwidth]{action-example.png}
@@ -336,7 +336,7 @@ Una volta terminato il training del modello è possibile testarlo, con altri dat
 Il modello di elaborazione moduli fornito da AI Builder consente di leggere e salvare informazioni da documenti standard come fatture o documenti fiscali. Automatizzando questo processo è possibile risparmiare molto tempo evitando, ad esempio, che l'utente debba passare ore a trascrivere a mano fatture all'interno di un gestionale.
 
 Il modello, tuttavia, presenta ancora alcune limitazioni, come ad esempio il formato del file (PDF, JPG, PNG), il numero di pagine  e la dimensione del documento (non più di 500 pagine per i PDF e 50 MB) e il supporto al solo alfabeto latino.
-Tra le limitazioni più importanti, inoltre, vi è il mancato supporto al riconoscimento di caselle di controllo, pulsanti di opzione e firme. Queste ultime tre limitazioni in particolare sono state un problema in fase di sviluppo dei progetti.
+Tra le limitazioni più importanti, inoltre, vi è il mancato supporto al riconoscimento di caselle di controllo, pulsanti di opzione e firme. Queste ultime tre limitazioni in particolare sono state un problema in fase di sviluppo dei progetti.~\cite{LimitazioniAIBuilder}
 
 Per creare il modello personalizzato di elaborazione dei moduli è necessario per prima cosa specificare i nomi dei campi e delle tabelle che dovranno essere estratti dal documento.
 In seguito, si dovranno caricare i file su cui avverrà il training del modello. AI Builder a questo punto analizzerà i documenti caricati in modo da rilevare la presenza di campi testuali e tabelle.
@@ -372,7 +372,7 @@ Dopodiché per utilizzare un modello all'interno di app e servizi Microsoft è n
 \label{ssec:utilizzoInPowerAutomate}
 Per utilizzare un modello AI Builder in un flusso Power Automate è sufficiente utilizzare l'action  del connettore AI Builder corrispondente al tipo di modello necessario. Per utilizzare un modello di elaborazione dei moduli, ad esempio, bisogna utilizzare la action \textit{Process and save information from forms} e selezionare il modello pubblicato, il tipo di documento e passare il file stesso come contenuto dinamico. Nell'esempio in Figura~\ref{fig:flowAIBuilder} il documento viene recuperato da un trigger manuale che richiede l'inserimento di un file da parte dell'utente. Nulla vieta tuttavia che il documento da analizzare possa essere l'allegato di un'email oppure un file in Onedrive o Sharepoint. Sarà necessario semplicemente utilizzare una action del relativo connettore per recuperare il file desiderato.
 
-Come output viene ritornato un oggetto JSON contenente dati diversi a seconda del tipo di modello utilizzato. Nel caso di esempio per ogni campo vengono ritornati, il valore corrispondente, il punteggio di confidence, le coordinate del riquadro che racchiude il valore, il numero di pagina in cui si trova il valore e altri dati. In Appendice~\ref{sec:completeOutputJson} è disponibile un esempio di oggetto JSON restituito.
+Come output viene ritornato un oggetto JSON contenente dati diversi a seconda del tipo di modello utilizzato. Nel caso di esempio per ogni campo vengono ritornati, il valore corrispondente, il punteggio di confidence, le coordinate del riquadro che racchiude il valore, il numero di pagina in cui si trova il valore e altri dati.
 I dati contenuti in questo oggetto inoltre vengono interpretati da Power Automate e resi disponibili come contenuto dinamico per essere utilizzati nel flusso da altre action.
 
 \begin{figure}[!ht]
