@@ -20,7 +20,7 @@ Il modulo Sales del CRM è progettato per gestire l'intero ciclo di vita di un n
   \item \textbf{Leads} - Rappresenta una persona o un'organizzazione che può diventare un potenziale cliente. Questo è il primo passaggio per l'inserimento di un potenziale cliente nel sistema.
   \item \textbf{Opportunities} - Rappresenta una potenziale vendita al cliente. Quando un Lead mostra interesse nell'offerta, viene convertita in Opportunity. Un'Opportunity può essere vinta o persa.
   \item \textbf{Accounts} - Rappresenta un'azienda con cui si ha una relazione. Quando un'Opportunity è vinta, viene convertita in un Account o un Contact.
-  \item \textbf{Contacts} - Rappresenta una persona o un individuo con cui l'azienda ha una relazione. In genere, un Contact è un cliente (ad esempio tutti gli intestatari di un conto presso per una banca).
+  \item \textbf{Contacts} - Rappresenta una persona o un individuo con cui l'azienda ha una relazione. In genere, un Contact è un cliente (ad esempio tutti gli intestatari di un conto presso una banca).
   \item \textbf{Competitors} - Gestisce i concorrenti di mercato dell'azienda.
   \item \textbf{Products} - Gestisce i prodotti offerti dall'azienda ai clienti.
   \item \textbf{Quotes} - Preventivo formale di prodotti o servizi proposti a prezzi specifici a un potenziale cliente.
@@ -71,7 +71,7 @@ Il CRM fornisce undici tipi di campi:
   \item Lookup
 \end{itemize} 
 
-A partire dalla versione 2011 inoltre è disponibile un particolare tipo di campo chiamato Party List. Questo tipo consente di mappare una relazione tra entità come nel caso del tipo Lookup ma con la differenza che quest'ultimo può mappare una relazione con una singola entità mentre un campo di tipo Party List permette di avere una relazione con entità multiple. Per esempio, una email può essere associata a un Contact, un User o una Queue.~\cite{DynamicsTutorialspoint}
+A partire dalla versione 2011 inoltre è disponibile un particolare tipo di campo chiamato Party List. Questo tipo consente di mappare una relazione tra entità come nel caso del tipo Lookup ma con la differenza che quest'ultimo può mappare una relazione con una singola entità mentre un campo di tipo Party List permette di avere una relazione con entità multiple. Per esempio, una Email può essere associata a un Contact, un User o una Queue.~\cite{DynamicsTutorialspoint}
 
 \subsection{Queue}
 Le Queue sono contenitori usati per raccogliere record del CRM che siano da completare o che richiedano un'azione, come per esempio il completamento di un \textit{task} o la chiusura di un Case.
@@ -99,7 +99,7 @@ Di default la vista a griglia di ogni entità supporta una funzionalità di Rice
   \label{fig:quickSearch}
 \end{figure}
 
-Cliccando invece sull'icona cerchiata in rosso in Figura~\ref{fig:quickSearch} si accede alla ricerca avanzata, disponibile in una nuova finestra. La ricerca avanzata del CRM è una delle funzionalità più utili e potenti disponibili di default. In questa finestra, come si vede in Figura~\ref{fig:advancedSearch}, è possibile selezionare l'entità di cui di vogliono cercare i record, applicare filtri e criteri di raggruppamento e salvare i risultati come viste (\textit{views}) personali.~\cite{DynamicsTutorialspoint}
+Cliccando invece sull'icona cerchiata in rosso in Figura~\ref{fig:quickSearch} si accede alla ricerca avanzata, disponibile in una nuova finestra. La ricerca avanzata del CRM è una delle funzionalità più utili e potenti disponibili di default. In questa finestra, come si vede in Figura~\ref{fig:advancedSearch}, è possibile selezionare l'entità di cui si vogliono cercare i record, applicare filtri e criteri di raggruppamento e salvare i risultati come viste (\textit{views}) personali.~\cite{DynamicsTutorialspoint}
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.7\textwidth]{advanced-search.png}
@@ -162,7 +162,7 @@ L'esecuzione di un workflow può avvenire in seguito a specifici eventi definiti
 Un workflow dunque non è altro che una sequenza di passaggi che vengono eseguiti sul CRM. Possono essere condizionali, di attesa o azioni. I primi due tipi sono auto esplicativi mentre nel terzo si può avere ad esempio la creazione o l'aggiornamento di un record, l'assegnamento di un record a un utente, l'invio di un'email, l'esecuzione di uno step custom programmato in .NET da uno sviluppatore oppure l'interruzione dell'esecuzione del workflow.~\cite{DynamicsTutorialspoint}
 
 \subsection{Plugin}
-Un \textit{Plugin} è pezzo di software che si integra con Microsoft Dynamics CRM per modificarne o estenderne il comportamento standard. I plugin si comportano come gestori di eventi (\textit{event handler}) e vengono eseguiti in seguito a un particolare evento nel CRM, specificato in fase di registrazione del plugin. Possono essere scritti in linguaggio C\# oppure Visual Basic e possono essere eseguiti in modalità sincrona o asincrona.
+Un \textit{Plugin} è un pezzo di software che si integra con Microsoft Dynamics CRM per modificarne o estenderne il comportamento standard. I plugin si comportano come gestori di eventi (\textit{event handler}) e vengono eseguiti in seguito a un particolare evento nel CRM, specificato in fase di registrazione del plugin. Possono essere scritti in linguaggio C\# oppure Visual Basic e possono essere eseguiti in modalità sincrona o asincrona.
 
 Alcuni esempi di scenari in cui un Plugin può essere utilizzato sono:
 \begin{itemize}
@@ -207,7 +207,7 @@ Infine, l'esecuzione viene ritornata all'applicazione che ha invocato l'evento.
 Il campo \textit{Message} specifica, come nel caso dei Workflow, il tipo di evento su cui il plugin è registrato. Per esempio, un plugin può essere registrato su un Create Message di un'entità Contact. In questo caso il codice del plugin verrebbe eseguito ogni qual volta un record Contact viene creato. Per le entità di default del CRM sono supportati più di 100 message diversi, mentre per le entità custom la scelta è più limitata.~\cite{DynamicsTutorialspoint}
 
 \subsubsection{Differenze tra Workflow e Plugin}
-Sia i Workflow che i Plugin possono essere utilizzati per estendere e le funzionalità del CRM. In molti casi i due approcci sono intercambiabili e possono essere utilizzati uno al posto dell'altro senza nessun problema. 
+Sia i Workflow che i Plugin possono essere utilizzati per estendere le funzionalità del CRM. In molti casi i due approcci sono intercambiabili e possono essere utilizzati uno al posto dell'altro senza nessun problema. 
 Tuttavia, la documentazione ufficiale Microsoft~\cite{PluginVSWorkflow} suggerisce alcune linee guida riportate in Tabella~\ref{table:pluginVsWorkflow}. Inoltre, i colleghi più esperti mi hanno spiegato che in generale preferiscono usare i plugin in caso di logica sincrona oppure molto complessa, mentre i workflow per la logica asincrona o per processi semplici e da eseguire in seguito a una richiesta dell'utente, come ad esempio l'invio automatico di email.
 
 \begin{table}[ht]
@@ -249,7 +249,7 @@ Microsoft Power Automate, in precedenza conosciuto come Microsoft Flow, è un se
 I due principali tipi di flussi di lavoro supportati da Power Automate sono i flussi cloud e i flussi desktop.
 \paragraph{Flussi Cloud} Si dividono in tre tipologie:
 \begin{itemize}
-  \item Flussi automatizzati - Permettono di creare un'automazione che viene attivata da un evento come l'arrivo di un email da una persona specifica. 
+  \item Flussi automatizzati - Permettono di creare un'automazione che viene attivata da un evento come l'arrivo di un'email da una persona specifica. 
   \item Flussi istantanei - Permettono di avviare un'automazione facendo click su un pulsante. È possibile automatizzare le azioni ripetitive come ad esempio l'invio di un promemoria su Microsoft Teams
   \item Flussi pianificati - Permettono di pianificare un'automazione ad una specifica ora come ad esempio il caricamento giornaliero di dati in SharePoint o in un database
 \end{itemize}

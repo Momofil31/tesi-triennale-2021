@@ -20,8 +20,8 @@ In Figura~\ref{fig:processoUtilities} un diagramma del processo modellato.
 
 Nel dettaglio si compone dei seguenti passaggi:
 \begin{enumerate}
-  \item Arrivo di un email da parte di un potenziale cliente con in allegato un modulo compilato. Il modulo contiene informazioni riguardanti il cliente stesso (anagrafica) e le necessità di fornitura di energia per le quali ha effettuato la richiesta di preventivo.
-  \item Il documento viene processato automaticamente mediante AI Builder e viene creato un nuovo record Lead nel CRM. Nel caso in cui il documento non venga processato correttamente o si verifichino errori viene inviata una email di cortesia al potenziale cliente che notifichi l'errore.
+  \item Arrivo di un'email da parte di un potenziale cliente con in allegato un modulo compilato. Il modulo contiene informazioni riguardanti il cliente stesso (anagrafica) e le necessità di fornitura di energia per le quali ha effettuato la richiesta di preventivo.
+  \item Il documento viene processato automaticamente mediante AI Builder e viene creato un nuovo record Lead nel CRM. Nel caso in cui il documento non venga processato correttamente o si verifichino errori viene inviata un'email di cortesia al potenziale cliente che notifichi l'errore.
   \item In seguito alla creazione del Lead quest'ultimo viene automaticamente \textit{qualificato} in un record Opportunity mediante un Plugin.
   \item Un operatore compila manualmente il preventivo (Quote) di fornitura basandosi sui dati raccolti in precedenza. 
   \item  Quando il preventivo viene contrassegnato come ''attivo'', viene avviato un secondo plugin che invia automaticamente un'email al cliente contenente il preventivo come allegato.
@@ -89,7 +89,7 @@ Si compone di diverse fasi:
 \end{figure}
 
 \subsubsection{Flusso di elaborazione della risposta del cliente}
-Il flusso che viene eseguito in seguito alla ricezione di un email di risposta a un preventivo è più articolato in quanto necessita di gestire due possibilità: offerta accettata oppure offerta rifiutata.
+Il flusso che viene eseguito in seguito alla ricezione di un'email di risposta a un preventivo è più articolato in quanto necessita di gestire due possibilità: offerta accettata oppure offerta rifiutata.
 
 Si compone delle seguenti fasi:
 \begin{enumerate}
